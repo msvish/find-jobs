@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <form id="form">
+    <label for="company">Company name</label>
+    <input id="company" required autocomplete="off" placeholder="Acclaim">
+
+    <label for="url">Careers page</label>
+    <input id="url" type="url" required placeholder="https://company.com/careers">
+
+    <button type="submit" id="save">Add to sheet</button>
+    <p id="status" role="status"></p>
+  </form>
+  <script src="config.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

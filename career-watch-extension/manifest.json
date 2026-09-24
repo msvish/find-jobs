@@ -1,0 +1,9 @@
+{
+  "manifest_version": 3,
+  "name": "Career Watch: Add company",
+  "version": "1.0",
+  "description": "Add a company's careers page to your Career Watch Google Sheet.",
+  "action": { "default_popup": "popup.html", "default_title": "Add to Career Watch" },
+  "permissions": ["activeTab"],
+  "host_permissions": ["https://script.google.com/*", "https://script.googleusercontent.com/*"]
+}
