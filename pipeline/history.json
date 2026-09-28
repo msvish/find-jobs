@@ -1,0 +1,22 @@
+[
+ {
+  "checked": "2026-09-24T14:46:56.760365-04:00",
+  "findings": [
+   {
+    "company": "Accaim",
+    "url": "https://www.withacclaim.com/company/careers#open-roles",
+    "first": true,
+    "emails": [],
+    "items": [
+     {
+      "title": "Frontend Software Engineer"
+     },
+     {
+      "title": "Solutions Engineer"
+     }
+    ]
+   }
+  ],
+  "errors": []
+ }
+]

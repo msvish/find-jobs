@@ -1,0 +1,19 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>No new roles this week | Career watch</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="report.css"></head><body><div class="wrap">
+<header><h1>No new roles this week</h1>
+<p class="meta">Watching 2 career pages. Last checked Sep 28 at 1:47 PM ET.</p>
+<div class="tools"><input type="search" id="q" placeholder="Filter by role or company" aria-label="Filter by role or company">
+<label><input type="checkbox" id="hf"> Hide first scans</label></div></header>
+<main><article class="co" data-company="accaim"><div class="co-head"><h2>Accaim<a class="careers" href="https://www.withacclaim.com/company/careers#open-roles" target="_blank" rel="noopener">Careers page</a></h2></div><ul class="roles"><li class="first"><span>Frontend Software Engineer</span><time datetime="2026-09-24T14:46:56.760365-04:00">Listed Sep 24</time></li><li class="first"><span>Solutions Engineer</span><time datetime="2026-09-24T14:46:56.760365-04:00">Listed Sep 24</time></li></ul></article></main></div><script>
+const q=document.getElementById('q'),hf=document.getElementById('hf');
+function apply(){const t=q.value.trim().toLowerCase();
+document.querySelectorAll('.co').forEach(co=>{let any=false;const c=co.dataset.company;
+co.querySelectorAll('.roles li').forEach(li=>{
+const m=(!t||c.includes(t)||li.textContent.toLowerCase().includes(t))&&!(hf.checked&&li.classList.contains('first'));
+li.hidden=!m;any=any||m});co.hidden=!any});}
+q.addEventListener('input',apply);hf.addEventListener('change',apply);
+</script></body></html>
