@@ -15,6 +15,9 @@ defaults:
   run:
     working-directory: pipeline # scripts live in FindJobs/pipeline
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true # run all JS actions on Node 24
+
 concurrency:
   group: career-watch
   cancel-in-progress: false
@@ -44,12 +47,12 @@ jobs:
         if: steps.gate.outputs.run == 'true'
         with:
           python-version: "3.12"
-          cache: pip
-          cache-dependency-path: pipeline/requirements.txt
 
       - name: Install dependencies
         if: steps.gate.outputs.run == 'true'
-        run: pip install -r requirements.txt
+        run: |
+          if [ -f requirements.txt ]; then pip install -r requirements.txt
+          else pip install requests beautifulsoup4; fi
 
       - name: Run watcher
         if: steps.gate.outputs.run == 'true'
