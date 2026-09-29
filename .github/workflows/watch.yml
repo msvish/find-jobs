@@ -62,7 +62,11 @@ jobs:
         working-directory: ${{ steps.loc.outputs.dir }}
         run: |
           if [ -f requirements.txt ]; then pip install -r requirements.txt
-          else pip install requests beautifulsoup4; fi
+          else pip install requests beautifulsoup4 playwright; fi
+
+      - name: Install headless browser
+        if: steps.gate.outputs.run == 'true'
+        run: python -m playwright install --with-deps chromium # for JavaScript-rendered career pages
 
       - name: Run watcher
         if: steps.gate.outputs.run == 'true'
@@ -112,11 +116,11 @@ jobs:
           cp "${{ needs.watch.outputs.dir }}/new.html" site/index.html
           cp "${{ needs.watch.outputs.dir }}/report.css" site/report.css
 
-      - uses: actions/configure-pages@v5
+      - uses: actions/configure-pages@v6
 
-      - uses: actions/upload-pages-artifact@v4
+      - uses: actions/upload-pages-artifact@v5
         with:
           path: site
 
       - id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
