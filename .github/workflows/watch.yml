@@ -22,6 +22,9 @@ jobs:
   watch:
     runs-on: ubuntu-24.04
     timeout-minutes: 20
+    outputs:
+      run: ${{ steps.gate.outputs.run }}
+      dir: ${{ steps.loc.outputs.dir }}
     steps:
       - name: Check time
         id: gate
@@ -65,7 +68,7 @@ jobs:
         if: steps.gate.outputs.run == 'true'
         working-directory: ${{ steps.loc.outputs.dir }}
         env:
-          SHEET_ID: ${{ vars.SHEET_ID }}
+          SHEET_ID: ${{ secrets.SHEET_ID }} # secret, not a variable: variables show up in public run logs
           SHEET_GID: ${{ vars.SHEET_GID }}
           GMAIL_USER: ${{ secrets.GMAIL_USER }}
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
@@ -86,3 +89,34 @@ jobs:
             git commit -m "Career watch: $(TZ=America/New_York date '+%Y-%m-%d %H:%M %Z')"
             git push
           fi
+
+  deploy:
+    needs: watch
+    if: needs.watch.outputs.run == 'true'
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: ${{ github.ref_name }} # latest commit, including the bot's results from the watch job
+
+      - name: Build site
+        run: |
+          mkdir site
+          cp "${{ needs.watch.outputs.dir }}/new.html" site/index.html
+          cp "${{ needs.watch.outputs.dir }}/report.css" site/report.css
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: site
+
+      - id: deployment
+        uses: actions/deploy-pages@v4
