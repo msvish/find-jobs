@@ -4,7 +4,8 @@ careers_watch.py - watch plain company career pages listed in an Excel sheet
 and report job postings that appeared since the last run.
 
 Google Sheet (row 1 = headers), one row per company:
-  CompanyName | CareersPage | selector | keywords | active   (only the first two are required)
+  CompanyName | CareersPage | selector | keywords | active | render   (only the first two are required)
+  render    (optional) "yes" forces a headless browser for pages that load jobs with JavaScript
   selector  (optional) CSS selector around the job list, e.g. "#careers" or ".openings"
             -> cuts noise a lot; find it with right-click > Inspect on the page
   keywords  (optional) comma-separated; only report new items containing one, e.g. "engineer,developer"
@@ -68,26 +69,33 @@ def load_sheet():
 
 
 def fetch_rendered(url):
-    """Fallback for JS-rendered pages. Needs: pip install playwright && playwright install chromium"""
+    """Headless browser for JS-rendered pages. Needs: pip install playwright && playwright install chromium"""
     try:
         from playwright.sync_api import sync_playwright
     except ImportError:
-        return None
+        raise RuntimeError("page needs a browser to render - run: pip install playwright && playwright install chromium")
     with sync_playwright() as p:
         browser = p.chromium.launch()
         page = browser.new_page(user_agent=HEADERS["User-Agent"])
-        page.goto(url, wait_until="networkidle", timeout=45000)
+        page.goto(url, wait_until="networkidle", timeout=60000)
+        page.wait_for_timeout(3000)  # let late AJAX job lists (Taleo, etc.) finish filling in
         html = page.content()
         browser.close()
     return html
 
 
-def fetch(url):
+# Pages whose raw HTML is a shell: lots of text, but the job list arrives later via JavaScript
+JS_SHELL_HINTS = ("taleo.net", "myworkdayjobs.com", "icims.com", "successfactors", "oraclecloud.com")
+
+
+def fetch(url, render=False):
+    if render or any(h in url.lower() for h in JS_SHELL_HINTS):
+        return fetch_rendered(url)
     r = requests.get(url, headers=HEADERS, timeout=25)
     r.raise_for_status()
     html = r.text
     if len(BeautifulSoup(html, "html.parser").get_text(strip=True)) < 400:  # probably JS-rendered
-        html = fetch_rendered(url) or html
+        html = fetch_rendered(url)
     return html
 
 
@@ -121,7 +129,7 @@ def notify(text, html):
         msg = MIMEText(html, "html")
         msg["Subject"] = f"Career page watch - {datetime.now():%b %d}"
         msg["From"] = os.environ["GMAIL_USER"]
-        msg["To"] = os.getenv("NOTIFY_TO", os.environ["GMAIL_USER"])
+        msg["To"] = os.getenv("NOTIFY_TO") or os.environ["GMAIL_USER"]
         with smtplib.SMTP_SSL("smtp.gmail.com", 465) as s:
             s.login(os.environ["GMAIL_USER"], os.environ["GMAIL_APP_PASSWORD"])
             s.send_message(msg)
@@ -141,7 +149,8 @@ def main():
         try:
             # a URL like .../careers#open-roles hints at the job section's id
             selector = row.get("selector") or ("#" + url.split("#", 1)[1] if "#" in url else "")
-            items, emails = extract(fetch(url), selector)
+            force_render = row.get("render", "").lower() in ("yes", "y", "true", "1")
+            items, emails = extract(fetch(url, force_render), selector)
         except Exception as e:
             errors.append(f"{name}: {e}")
             continue
@@ -177,7 +186,7 @@ def main():
     text = "\n".join(lines)
     print(text)
     # if any(not f["first"] for f in findings):
-    #     notify(text, render([history[0]], len(rows), now, inline_css=True))
+        # notify(text, render([history[0]], len(rows), now, inline_css=True))
 
 
 if __name__ == "__main__":

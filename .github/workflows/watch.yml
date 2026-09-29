@@ -1,0 +1,70 @@
+name: Career page watch
+
+on:
+  schedule:
+    # GitHub cron is UTC only. 1am Eastern = 05:00 UTC (EDT, summer) or 06:00 UTC (EST, winter).
+    # Both fire; the "Check time" step lets only the one that lands at 1am ET continue.
+    - cron: "0 5 * * *"
+    - cron: "0 6 * * *"
+  workflow_dispatch: # "Run workflow" button in the Actions tab, always runs
+
+permissions:
+  contents: write # to commit state.json, history.json, new.html back to the repo
+
+concurrency:
+  group: career-watch
+  cancel-in-progress: false
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Check time
+        id: gate
+        run: |
+          hour=$(TZ=America/New_York date +%H)
+          echo "Eastern hour: $hour"
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] || [ "$hour" = "01" ]; then
+            echo "run=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "Not 1am Eastern (other DST trigger), skipping."
+            echo "run=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - uses: actions/checkout@v4
+        if: steps.gate.outputs.run == 'true'
+
+      - uses: actions/setup-python@v5
+        if: steps.gate.outputs.run == 'true'
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        if: steps.gate.outputs.run == 'true'
+        run: pip install -r requirements.txt
+
+      - name: Run watcher
+        if: steps.gate.outputs.run == 'true'
+        env:
+          SHEET_ID: ${{ vars.SHEET_ID }}
+          SHEET_GID: ${{ vars.SHEET_GID }}
+          GMAIL_USER: ${{ secrets.GMAIL_USER }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          NOTIFY_TO: ${{ secrets.NOTIFY_TO }}
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+        run: python careers_watch.py
+
+      - name: Commit results
+        if: steps.gate.outputs.run == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          for f in state.json history.json new.html; do if [ -f "$f" ]; then git add "$f"; fi; done
+          if git diff --cached --quiet; then
+            echo "Nothing to commit."
+          else
+            git commit -m "Career watch: $(TZ=America/New_York date '+%Y-%m-%d %H:%M %Z')"
+            git push
+          fi
