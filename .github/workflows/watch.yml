@@ -9,7 +9,11 @@ on:
   workflow_dispatch: # "Run workflow" button in the Actions tab, always runs
 
 permissions:
-  contents: write # to commit state.json, history.json, new.html back to the repo
+  contents: write # to commit pipeline/state.json, history.json, new.html back to the repo
+
+defaults:
+  run:
+    working-directory: pipeline # scripts live in FindJobs/pipeline
 
 concurrency:
   group: career-watch
@@ -17,11 +21,12 @@ concurrency:
 
 jobs:
   watch:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 20
     steps:
       - name: Check time
         id: gate
+        working-directory: . # runs before checkout, when pipeline/ doesn't exist yet
         run: |
           hour=$(TZ=America/New_York date +%H)
           echo "Eastern hour: $hour"
@@ -32,14 +37,15 @@ jobs:
             echo "run=false" >> "$GITHUB_OUTPUT"
           fi
 
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         if: steps.gate.outputs.run == 'true'
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         if: steps.gate.outputs.run == 'true'
         with:
           python-version: "3.12"
           cache: pip
+          cache-dependency-path: pipeline/requirements.txt
 
       - name: Install dependencies
         if: steps.gate.outputs.run == 'true'
