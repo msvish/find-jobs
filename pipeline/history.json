@@ -1,5 +1,12 @@
 [
  {
+  "checked": "2026-09-29T13:35:56.756354-04:00",
+  "findings": [],
+  "errors": [
+   "University of Alabama: page needs a browser to render - run: pip install playwright && playwright install chromium"
+  ]
+ },
+ {
   "checked": "2026-09-29T13:10:05.588968-04:00",
   "findings": [],
   "errors": [
