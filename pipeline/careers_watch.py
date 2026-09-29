@@ -30,9 +30,21 @@ from bs4 import BeautifulSoup
 from report import render
 
 BASE = Path(__file__).resolve().parent
+
+# Local runs: put KEY=value lines in pipeline/.env (gitignored). In GitHub Actions they come from repo variables.
+_env = BASE / ".env"
+if _env.exists():
+    for _line in _env.read_text().splitlines():
+        if "=" in _line and not _line.lstrip().startswith("#"):
+            _k, _v = _line.split("=", 1)
+            os.environ.setdefault(_k.strip(), _v.strip().strip('"').strip("'"))
+
 # From your sheet URL: https://docs.google.com/spreadsheets/d/<SHEET_ID>/edit#gid=<SHEET_GID>
-SHEET_ID = os.getenv("SHEET_ID", "1vRYUmUXby4ndyF3gUqdRR73GCCNVpKkaBvKgaL5k_bk")
-SHEET_GID = os.getenv("SHEET_GID", "0")
+SHEET_ID = os.getenv("SHEET_ID", "").strip()
+SHEET_GID = os.getenv("SHEET_GID", "").strip() or "0"
+if not SHEET_ID:
+    raise SystemExit("SHEET_ID is not set. In GitHub: Settings > Secrets and variables > Actions > Variables. "
+                     "Locally: add SHEET_ID=... to pipeline/.env")
 SHEET_URL = f"https://docs.google.com/spreadsheets/d/{SHEET_ID}/export?format=csv&gid={SHEET_GID}"
 STATE = BASE / "state.json"
 HISTORY = BASE / "history.json"
@@ -122,19 +134,6 @@ def looks_like_title(t):
     return len(t.split()) <= 8 and not t.rstrip().endswith((".", "!", "?"))
 
 
-def notify(text, html):
-    if os.getenv("SLACK_WEBHOOK"):
-        requests.post(os.environ["SLACK_WEBHOOK"], json={"text": text}, timeout=15)
-    if os.getenv("GMAIL_USER") and os.getenv("GMAIL_APP_PASSWORD"):
-        msg = MIMEText(html, "html")
-        msg["Subject"] = f"Career page watch - {datetime.now():%b %d}"
-        msg["From"] = os.environ["GMAIL_USER"]
-        msg["To"] = os.getenv("NOTIFY_TO") or os.environ["GMAIL_USER"]
-        with smtplib.SMTP_SSL("smtp.gmail.com", 465) as s:
-            s.login(os.environ["GMAIL_USER"], os.environ["GMAIL_APP_PASSWORD"])
-            s.send_message(msg)
-
-
 def main():
     now = datetime.now(TZ)
     rows = load_sheet()
@@ -184,9 +183,6 @@ def main():
     if errors:
         lines += ["", "Errors:"] + [f"   {e}" for e in errors]
     text = "\n".join(lines)
-    print(text)
-    # if any(not f["first"] for f in findings):
-        # notify(text, render([history[0]], len(rows), now, inline_css=True))
 
 
 if __name__ == "__main__":

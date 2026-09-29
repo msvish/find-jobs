@@ -1,5 +1,22 @@
 [
  {
+  "checked": "2026-09-29T13:07:43.195877-04:00",
+  "findings": [
+   {
+    "company": "University of Alabama",
+    "url": "https://uab.taleo.net/careersection/ext/jobsearch.ftl",
+    "first": false,
+    "emails": [],
+    "items": [
+     {
+      "title": "DATA SCIENTIST"
+     }
+    ]
+   }
+  ],
+  "errors": []
+ },
+ {
   "checked": "2026-09-24T14:46:56.760365-04:00",
   "findings": [
    {

@@ -9,11 +9,7 @@ on:
   workflow_dispatch: # "Run workflow" button in the Actions tab, always runs
 
 permissions:
-  contents: write # to commit pipeline/state.json, history.json, new.html back to the repo
-
-defaults:
-  run:
-    working-directory: pipeline # scripts live in FindJobs/pipeline
+  contents: write # to commit state.json, history.json, new.html back to the repo
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true # run all JS actions on Node 24
@@ -29,7 +25,6 @@ jobs:
     steps:
       - name: Check time
         id: gate
-        working-directory: . # runs before checkout, when pipeline/ doesn't exist yet
         run: |
           hour=$(TZ=America/New_York date +%H)
           echo "Eastern hour: $hour"
@@ -43,6 +38,17 @@ jobs:
       - uses: actions/checkout@v5
         if: steps.gate.outputs.run == 'true'
 
+      - name: Locate script folder
+        id: loc
+        if: steps.gate.outputs.run == 'true'
+        run: |
+          echo "Tracked files:"; git ls-files
+          path=$(git ls-files | grep -E '(^|/)careers_watch\.py$' | head -n1)
+          if [ -z "$path" ]; then echo "::error::careers_watch.py is not committed to this repo"; exit 1; fi
+          dir=$(dirname "$path")
+          echo "Using folder: $dir"
+          echo "dir=$dir" >> "$GITHUB_OUTPUT"
+
       - uses: actions/setup-python@v6
         if: steps.gate.outputs.run == 'true'
         with:
@@ -50,12 +56,14 @@ jobs:
 
       - name: Install dependencies
         if: steps.gate.outputs.run == 'true'
+        working-directory: ${{ steps.loc.outputs.dir }}
         run: |
           if [ -f requirements.txt ]; then pip install -r requirements.txt
           else pip install requests beautifulsoup4; fi
 
       - name: Run watcher
         if: steps.gate.outputs.run == 'true'
+        working-directory: ${{ steps.loc.outputs.dir }}
         env:
           SHEET_ID: ${{ vars.SHEET_ID }}
           SHEET_GID: ${{ vars.SHEET_GID }}
@@ -67,6 +75,7 @@ jobs:
 
       - name: Commit results
         if: steps.gate.outputs.run == 'true'
+        working-directory: ${{ steps.loc.outputs.dir }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
