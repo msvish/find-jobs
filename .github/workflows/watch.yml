@@ -2,11 +2,10 @@ name: Career page watch
 
 on:
   schedule:
-    # GitHub cron is UTC only. 1am Eastern = 05:00 UTC (EDT, summer) or 06:00 UTC (EST, winter).
-    # Both fire; the "Check time" step lets only the one that lands at 1am ET continue.
-    - cron: "0 5 * * *"
-    - cron: "0 6 * * *"
-  workflow_dispatch: # "Run workflow" button in the Actions tab, always runs
+    # GitHub cron is UTC only. 10:17 UTC = 2:17am PST (winter, standard time) / 3:17am PDT (summer).
+    # Off the top of the hour on purpose: :00 is when GitHub's scheduler is busiest and runs start latest.
+    - cron: "17 10 * * *"
+  workflow_dispatch: # "Run workflow" button in the Actions tab
 
 permissions:
   contents: write # to commit state.json, history.json, new.html back to the repo
@@ -23,27 +22,12 @@ jobs:
     runs-on: ubuntu-24.04
     timeout-minutes: 20
     outputs:
-      run: ${{ steps.gate.outputs.run }}
       dir: ${{ steps.loc.outputs.dir }}
     steps:
-      - name: Check time
-        id: gate
-        run: |
-          hour=$(TZ=America/New_York date +%H)
-          echo "Eastern hour: $hour"
-          if [ "${{ github.event_name }}" = "workflow_dispatch" ] || [ "$hour" = "01" ]; then
-            echo "run=true" >> "$GITHUB_OUTPUT"
-          else
-            echo "Not 1am Eastern (other DST trigger), skipping."
-            echo "run=false" >> "$GITHUB_OUTPUT"
-          fi
-
       - uses: actions/checkout@v5
-        if: steps.gate.outputs.run == 'true'
 
       - name: Locate script folder
         id: loc
-        if: steps.gate.outputs.run == 'true'
         run: |
           echo "Tracked files:"; git ls-files
           path=$(git ls-files | grep -E '(^|/)careers_watch\.py$' | head -n1)
@@ -53,23 +37,19 @@ jobs:
           echo "dir=$dir" >> "$GITHUB_OUTPUT"
 
       - uses: actions/setup-python@v6
-        if: steps.gate.outputs.run == 'true'
         with:
           python-version: "3.12"
 
       - name: Install dependencies
-        if: steps.gate.outputs.run == 'true'
         working-directory: ${{ steps.loc.outputs.dir }}
         run: |
           if [ -f requirements.txt ]; then pip install -r requirements.txt
           else pip install requests beautifulsoup4 playwright; fi
 
       - name: Install headless browser
-        if: steps.gate.outputs.run == 'true'
         run: python -m playwright install --with-deps chromium # for JavaScript-rendered career pages
 
       - name: Run watcher
-        if: steps.gate.outputs.run == 'true'
         working-directory: ${{ steps.loc.outputs.dir }}
         env:
           SHEET_ID: ${{ secrets.SHEET_ID }} # secret, not a variable: variables show up in public run logs
@@ -81,7 +61,6 @@ jobs:
         run: python careers_watch.py
 
       - name: Commit results
-        if: steps.gate.outputs.run == 'true'
         working-directory: ${{ steps.loc.outputs.dir }}
         run: |
           git config user.name "github-actions[bot]"
@@ -90,13 +69,12 @@ jobs:
           if git diff --cached --quiet; then
             echo "Nothing to commit."
           else
-            git commit -m "Career watch: $(TZ=America/New_York date '+%Y-%m-%d %H:%M %Z')"
+            git commit -m "Career watch: $(TZ=America/Los_Angeles date '+%Y-%m-%d %H:%M %Z')"
             git push
           fi
 
   deploy:
     needs: watch
-    if: needs.watch.outputs.run == 'true'
     runs-on: ubuntu-24.04
     permissions:
       contents: read

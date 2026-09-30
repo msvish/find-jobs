@@ -4,3 +4,4 @@ __pycache__/
 .DS_Store
 .env
 pipeline/watch.log
+career-watch-extension/config.js
