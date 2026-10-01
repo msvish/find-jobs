@@ -1,5 +1,22 @@
 [
  {
+  "checked": "2026-10-01T13:11:50.011554-04:00",
+  "findings": [
+   {
+    "company": "University of Alabama",
+    "url": "https://uab.taleo.net/careersection/ext/jobsearch.ftl",
+    "first": false,
+    "emails": [],
+    "items": [
+     {
+      "title": "PROJECT MANAGER-FACILITIES ELECTRICAL ENGINEER"
+     }
+    ]
+   }
+  ],
+  "errors": []
+ },
+ {
   "checked": "2026-09-29T13:35:56.756354-04:00",
   "findings": [],
   "errors": [
