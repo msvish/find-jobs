@@ -1,5 +1,25 @@
 [
  {
+  "checked": "2026-10-04T11:24:22.139192-04:00",
+  "findings": [
+   {
+    "company": "Misfits Market",
+    "url": "https://job-boards.greenhouse.io/misfitsmarket?departments%5B%5D=4020779003",
+    "first": true,
+    "emails": [],
+    "items": [
+     {
+      "title": "Senior Data Analyst, Experimentation"
+     },
+     {
+      "title": "Senior Data Analyst, Experimentation Remote"
+     }
+    ]
+   }
+  ],
+  "errors": []
+ },
+ {
   "checked": "2026-10-01T13:11:50.011554-04:00",
   "findings": [
    {
