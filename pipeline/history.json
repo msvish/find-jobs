@@ -1,5 +1,49 @@
 [
  {
+  "checked": "2026-10-05T15:19:04.643835-04:00",
+  "findings": [
+   {
+    "company": "Cheiron",
+    "url": "https://jobs.ashbyhq.com/Cheiron",
+    "first": true,
+    "emails": [],
+    "items": [
+     {
+      "title": "Agent Engineering Intern (Los Altos)"
+     },
+     {
+      "title": "Backend Engineer, Applied Agents (Los Altos)"
+     },
+     {
+      "title": "Backend Engineer, Applied Agents (Seoul)"
+     },
+     {
+      "title": "Engineering \u2022 Los Altos \u2022 Intern \u2022 On-site"
+     },
+     {
+      "title": "Full Stack Engineer (Los Altos)"
+     },
+     {
+      "title": "Full Stack Engineer (Seoul)"
+     },
+     {
+      "title": "Intern \u2014 Open Application (Los Altos)"
+     },
+     {
+      "title": "Others \u2022 Los Altos \u2022 Intern \u2022 On-site"
+     },
+     {
+      "title": "Product \u2022 Los Altos \u2022 Intern \u2022 On-site"
+     },
+     {
+      "title": "Technical Product Management Intern (Los Altos)"
+     }
+    ]
+   }
+  ],
+  "errors": []
+ },
+ {
   "checked": "2026-10-04T11:24:22.139192-04:00",
   "findings": [
    {
