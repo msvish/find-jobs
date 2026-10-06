@@ -1,5 +1,22 @@
 [
  {
+  "checked": "2026-10-06T12:50:16.620420-04:00",
+  "findings": [
+   {
+    "company": "University of Alabama",
+    "url": "https://uab.taleo.net/careersection/ext/jobsearch.ftl",
+    "first": false,
+    "emails": [],
+    "items": [
+     {
+      "title": "SOFTWARE DEVELOPER-ENT"
+     }
+    ]
+   }
+  ],
+  "errors": []
+ },
+ {
   "checked": "2026-10-05T15:19:04.643835-04:00",
   "findings": [
    {
