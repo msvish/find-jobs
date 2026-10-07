@@ -1,5 +1,127 @@
 [
  {
+  "checked": "2026-10-07T13:26:39.306586-04:00",
+  "findings": [
+   {
+    "company": "University of Alabama",
+    "url": "https://uab.taleo.net/careersection/ext/jobsearch.ftl",
+    "first": false,
+    "emails": [],
+    "items": [
+     {
+      "title": "RESEARCH SCIENTIST SENIOR"
+     }
+    ]
+   },
+   {
+    "company": "Dotlogics",
+    "url": "https://dotlogics.com/careers",
+    "first": true,
+    "emails": [
+     "contact@dotlogics.com"
+    ],
+    "items": [
+     {
+      "title": "Data Solutions Architect"
+     },
+     {
+      "title": "Ecommerce Solutions Architect"
+     },
+     {
+      "title": "Solutions Architect"
+     }
+    ]
+   },
+   {
+    "company": "Kepler",
+    "url": "https://jobs.ashbyhq.com/kepler-ai?departmentId=0794cbb8-7fca-48dc-b655-feb8cb73cf13",
+    "first": true,
+    "emails": [],
+    "items": [
+     {
+      "title": "Agentic Systems Engineer"
+     },
+     {
+      "title": "Backend Software Engineer"
+     },
+     {
+      "title": "Frontend Software Engineer"
+     },
+     {
+      "title": "Full Stack Engineer"
+     },
+     {
+      "title": "Machine Learning Engineer"
+     }
+    ]
+   },
+   {
+    "company": "M&T",
+    "url": "https://mtb.wd5.myworkdayjobs.com/en-US/MTB?jobFamily=e8f67fb24d7c10020c42cd74a1470000",
+    "first": true,
+    "emails": [
+     "careersitesupport@mtb.com"
+    ],
+    "items": [
+     {
+      "title": "Lead Software Engineer"
+     },
+     {
+      "title": "Lead Software Engineer (AI-Driven Development)"
+     },
+     {
+      "title": "Lead Software Engineer (Java/Springboot/API - Entitlements)"
+     },
+     {
+      "title": "Lead Software Engineer - Axiom ControllerView"
+     },
+     {
+      "title": "Lead Software Engineer - Tech 360"
+     },
+     {
+      "title": "Principal AI Platform Engineer"
+     },
+     {
+      "title": "Senior Site Reliability Engineer (Digital Banking)"
+     },
+     {
+      "title": "Senior Software Engineer"
+     },
+     {
+      "title": "Senior Software Engineer - Actimize"
+     },
+     {
+      "title": "Senior Software Engineer - Archer"
+     },
+     {
+      "title": "Senior Software Engineer - Liquidity & Treasury"
+     },
+     {
+      "title": "Senior Software Engineer - Payment Technology"
+     },
+     {
+      "title": "Senior Software Engineer - ServiceNow"
+     },
+     {
+      "title": "Senior Software Engineer - Tech 360"
+     },
+     {
+      "title": "Software Development"
+     },
+     {
+      "title": "Software Engineer - Liquidity Reporting"
+     },
+     {
+      "title": "\u2013 SDLC GenAI Automation & Tooling Integrations Engineer"
+     }
+    ]
+   }
+  ],
+  "errors": [
+   "Rotto: 429 Client Error: Too Many Requests for url: https://www.rotto.com/careers"
+  ]
+ },
+ {
   "checked": "2026-10-06T12:50:16.620420-04:00",
   "findings": [
    {
