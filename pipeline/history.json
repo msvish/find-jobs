@@ -1,5 +1,40 @@
 [
  {
+  "checked": "2026-10-08T13:25:18.878500-04:00",
+  "findings": [
+   {
+    "company": "University of Alabama",
+    "url": "https://uab.taleo.net/careersection/ext/jobsearch.ftl",
+    "first": false,
+    "emails": [],
+    "items": [
+     {
+      "title": "COMPUTATIONAL SCIENTIST"
+     }
+    ]
+   },
+   {
+    "company": "M&T",
+    "url": "https://mtb.wd5.myworkdayjobs.com/en-US/MTB?jobFamily=e8f67fb24d7c10020c42cd74a1470000",
+    "first": false,
+    "emails": [
+     "careersitesupport@mtb.com"
+    ],
+    "items": [
+     {
+      "title": "Senior Software Engineer - Snowflake"
+     },
+     {
+      "title": "Software Engineer - Snowflake"
+     }
+    ]
+   }
+  ],
+  "errors": [
+   "Rotto: 429 Client Error: Too Many Requests for url: https://www.rotto.com/careers"
+  ]
+ },
+ {
   "checked": "2026-10-07T13:26:39.306586-04:00",
   "findings": [
    {
