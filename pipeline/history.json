@@ -1,5 +1,35 @@
 [
  {
+  "checked": "2026-10-09T13:00:56.455415-04:00",
+  "findings": [
+   {
+    "company": "M&T",
+    "url": "https://mtb.wd5.myworkdayjobs.com/en-US/MTB?jobFamily=e8f67fb24d7c10020c42cd74a1470000",
+    "first": false,
+    "emails": [
+     "careersitesupport@mtb.com"
+    ],
+    "items": [
+     {
+      "title": "Lead Software Engineer - .Net/Azure"
+     },
+     {
+      "title": "Senior Software Engineer - Oracle Cloud Applications"
+     },
+     {
+      "title": "Senior iOS Developer \u2013 Banking Applications"
+     },
+     {
+      "title": "Software Engineer - Oracle Cloud Applicatoins"
+     }
+    ]
+   }
+  ],
+  "errors": [
+   "Rotto: 429 Client Error: Too Many Requests for url: https://www.rotto.com/careers"
+  ]
+ },
+ {
   "checked": "2026-10-08T13:25:18.878500-04:00",
   "findings": [
    {
