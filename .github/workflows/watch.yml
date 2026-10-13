@@ -54,6 +54,7 @@ jobs:
         env:
           SHEET_ID: ${{ secrets.SHEET_ID }} # secret, not a variable: variables show up in public run logs
           SHEET_GID: ${{ vars.SHEET_GID }}
+          US_ONLY: ${{ vars.US_ONLY }} # set repo variable US_ONLY=no to include roles outside the US
           GMAIL_USER: ${{ secrets.GMAIL_USER }}
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
           NOTIFY_TO: ${{ secrets.NOTIFY_TO }}

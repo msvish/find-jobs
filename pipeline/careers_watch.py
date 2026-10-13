@@ -49,7 +49,7 @@ SHEET_URL = f"https://docs.google.com/spreadsheets/d/{SHEET_ID}/export?format=cs
 STATE = BASE / "state.json"
 HISTORY = BASE / "history.json"
 PAGE = BASE / "new.html"
-TZ = ZoneInfo("America/New_York")
+TZ = ZoneInfo("America/Los_Angeles")
 MAX_RUNS = 200  # runs kept in history.json
 
 HEADERS = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
@@ -59,6 +59,62 @@ JOB_WORDS = re.compile(r"\b(engineer|developer|programmer|intern(ship)?|analyst|
                        r"position|hiring|vacanc(y|ies))\b", re.I)
 NOISE = re.compile(r"(cookie|privacy|terms of|copyright|©|subscribe|newsletter|log ?in|sign ?up)", re.I)
 EMAIL = re.compile(r"[\w.+-]+@[\w-]+\.[a-z]{2,}(?:\.[a-z]{2,})?", re.I)
+
+
+# --- United States filter ---------------------------------------------------------------
+# Set the repo variable US_ONLY=no to turn this off. Roles whose location can't be read are kept
+# (shown as "Location not listed") rather than silently dropped.
+US_ONLY = (os.getenv("US_ONLY") or "yes").strip().lower() not in ("no", "n", "false", "0")
+
+_ABBR = ("AL AK AZ AR CA CO CT DE FL GA HI ID IL IN IA KS KY LA ME MD MA MI MN MS MO MT NE NV NH NJ NM NY "
+         "NC ND OH OK OR PA RI SC SD TN TX UT VT VA WA WV WI WY DC").split()
+_STATES = ("Alabama|Alaska|Arizona|Arkansas|California|Colorado|Connecticut|Delaware|Florida|Georgia|Hawaii|"
+           "Idaho|Illinois|Indiana|Iowa|Kansas|Kentucky|Louisiana|Maine|Maryland|Massachusetts|Michigan|"
+           "Minnesota|Mississippi|Missouri|Montana|Nebraska|Nevada|New Hampshire|New Jersey|New Mexico|"
+           "New York|North Carolina|North Dakota|Ohio|Oklahoma|Oregon|Pennsylvania|Rhode Island|"
+           "South Carolina|South Dakota|Tennessee|Texas|Utah|Vermont|Virginia|West Virginia|Wisconsin|Wyoming")
+_CITIES = ("San Francisco|Los Angeles|San Diego|San Jose|Seattle|Portland|Austin|Dallas|Houston|Chicago|Boston|"
+           "Atlanta|Miami|Denver|Phoenix|Philadelphia|Pittsburgh|Detroit|Ann Arbor|Minneapolis|Charlotte|Raleigh|"
+           "Nashville|Salt Lake City|Brooklyn|Palo Alto|Mountain View|Menlo Park|Sunnyvale|Santa Clara|Redmond|"
+           "Bellevue|Los Altos|Washington,? D\\.?C\\.?")
+# Case-sensitive: country codes ("US", "USA"), "City, ST" abbreviations.
+US_MARK = re.compile(r"(?<![A-Za-z])(?:U\.S\.A?\.?|USA|US)(?![A-Za-z])|,\s*(?:" + "|".join(_ABBR) + r")\b")
+# Case-insensitive: "United States", full state names, common US cities.
+US_MARK_CI = re.compile(r"United States(?: of America)?|\b(?:" + _STATES + r")\b|\b(?:" + _CITIES + r")\b", re.I)
+FOREIGN_MARK = re.compile(
+    r"\b(?:India|Canada|United Kingdom|England|Scotland|Wales|Ireland|Germany|France|Spain|Italy|Netherlands|"
+    r"Poland|Portugal|Sweden|Norway|Denmark|Finland|Switzerland|Austria|Belgium|Israel|Dubai|UAE|"
+    r"Saudi Arabia|Singapore|Hong Kong|Japan|Korea|China|Taiwan|Australia|New Zealand|Brazil|Argentina|"
+    r"Colombia|Chile|Peru|Philippines|Vietnam|Indonesia|Malaysia|Thailand|Pakistan|Bangladesh|Nigeria|"
+    r"Kenya|South Africa|Egypt|Turkey|Ukraine|Romania|Czech|Hungary|"
+    r"London|Berlin|Munich|Paris|Madrid|Barcelona|Amsterdam|Dublin|Warsaw|Lisbon|Stockholm|Copenhagen|"
+    r"Zurich|Tel Aviv|Tokyo|Seoul|Beijing|Shanghai|Taipei|Sydney|Melbourne|Toronto|Vancouver|Montreal|"
+    r"Ottawa|Calgary|Bangalore|Bengaluru|Hyderabad|Pune|Chennai|Mumbai|Delhi|Gurgaon|Gurugram|Noida|"
+    r"Manila|Sao Paulo|S[aã]o Paulo|Mexico City|Europe|Asia)\b|(?<!New )\bMexico\b|\b(?:EMEA|APAC|LATAM|DACH)\b",
+    re.I)
+
+
+def us_status(text):
+    """'us' (a US location is named), 'foreign' (only non-US places named) or 'unknown' (can't tell)."""
+    if US_MARK.search(text) or US_MARK_CI.search(text):
+        return "us"          # checked first, so "Paris, TX" is US and "NYC or London" counts as US
+    if FOREIGN_MARK.search(text):
+        return "foreign"
+    return "unknown"
+
+
+def guess_location(ctx, title=""):
+    """Short location for display, read from the job card's own text segments; '' when none is recognisable."""
+    for seg in re.split(r"\s*[|•·]\s*", ctx):
+        seg = " ".join(seg.split())
+        if not seg or seg == title or len(seg) > 60:
+            continue
+        m = re.fullmatch(r"US-([A-Z]{2})-(.+)", seg)  # Taleo style: US-AL-Birmingham
+        if m:
+            return f"{m.group(2)}, {m.group(1)}"
+        if us_status(seg) == "us":
+            return seg
+    return "Remote" if re.search(r"\bremote\b", f"{ctx} {title}", re.I) else ""
 
 
 def load_sheet():
@@ -120,18 +176,60 @@ def extract(html, selector):
     roots = soup.select(selector) if selector else []
     if not roots:  # selector missing or not found in the HTML -> use whole page
         roots = [soup.body or soup]
-    items = set()
+    items, ctx, cache = set(), {}, {}
+
+    def clean(node):
+        if id(node) not in cache:
+            cache[id(node)] = " ".join(node.get_text(" ", strip=True).split())
+        return cache[id(node)]
+
+    def segments(node):  # same text, but pieces from different elements are joined with " | "
+        if ("s", id(node)) not in cache:
+            cache[("s", id(node))] = " | ".join(" ".join(t.split()) for t in node.stripped_strings)
+        return cache[("s", id(node))]
+
     for root in roots:
         for el in root.find_all(["a", "h1", "h2", "h3", "h4", "h5", "li", "p", "td", "strong"]):
-            text = " ".join(el.get_text(" ", strip=True).split())
+            text = clean(el)
             if 4 <= len(text) <= 160 and not NOISE.search(text):
                 items.add(text)
-    return items, sorted(e for e in emails if not e.lower().endswith((".png", ".jpg", ".svg")))
+                if text not in ctx:  # smallest surrounding block that holds more than the title: the job "card"
+                    for anc in list(el.parents)[:4]:
+                        if len(text) + 3 < len(clean(anc)) <= 400:
+                            ctx[text] = segments(anc)
+                            break
+    return items, ctx, sorted(e for e in emails if not e.lower().endswith((".png", ".jpg", ".svg")))
 
 
 def looks_like_title(t):
     """Job titles are short and don't end like a sentence; descriptions do."""
-    return len(t.split()) <= 8 and not t.rstrip().endswith((".", "!", "?"))
+    return len(t.split()) <= 8 and "•" not in t and not t.rstrip().endswith((".", "!", "?"))
+
+
+def drop_merged(cands, items, ctx):
+    """Greenhouse-style cards yield 'Data Engineer' and 'Data Engineer Remote' (title + location line merged).
+    Drop the merged one when its extra words are a separate piece of the same card."""
+    def merged(a):
+        for b in items:
+            if b != a and a.startswith(b + " "):
+                extra = a[len(b) + 1:].strip()
+                if extra in {x.strip() for x in ctx.get(b, "").split("|")}:
+                    return True
+        return False
+    return [a for a in cands if not merged(a)]
+
+
+def notify(text, html):
+    if os.getenv("SLACK_WEBHOOK"):
+        requests.post(os.environ["SLACK_WEBHOOK"], json={"text": text}, timeout=15)
+    if os.getenv("GMAIL_USER") and os.getenv("GMAIL_APP_PASSWORD"):
+        msg = MIMEText(html, "html")
+        msg["Subject"] = f"Career page watch - {datetime.now():%b %d}"
+        msg["From"] = os.environ["GMAIL_USER"]
+        msg["To"] = os.getenv("NOTIFY_TO") or os.environ["GMAIL_USER"]
+        with smtplib.SMTP_SSL("smtp.gmail.com", 465) as s:
+            s.login(os.environ["GMAIL_USER"], os.environ["GMAIL_APP_PASSWORD"])
+            s.send_message(msg)
 
 
 def main():
@@ -149,7 +247,7 @@ def main():
             # a URL like .../careers#open-roles hints at the job section's id
             selector = row.get("selector") or ("#" + url.split("#", 1)[1] if "#" in url else "")
             force_render = row.get("render", "").lower() in ("yes", "y", "true", "1")
-            items, emails = extract(fetch(url, force_render), selector)
+            items, ctx, emails = extract(fetch(url, force_render), selector)
         except Exception as e:
             errors.append(f"{name}: {e}")
             continue
@@ -158,9 +256,17 @@ def main():
         cands = sorted(t for t in items if t not in old and looks_like_title(t) and JOB_WORDS.search(t))
         if row["keywords"]:
             cands = [t for t in cands if any(k in t.lower() for k in row["keywords"])]
-        if cands:
+        cands = drop_merged(cands, items, ctx)
+        roles = []
+        for t in cands:
+            where = f"{t} {ctx.get(t, '')}"
+            status = us_status(where)
+            if US_ONLY and status == "foreign":
+                continue  # outside the US: still in state.json, so it never comes back as "new" later
+            roles.append({"title": t, "loc": guess_location(ctx.get(t, ""), t), "us": status})
+        if roles:
             findings.append({"company": name, "url": url, "first": prev is None, "emails": emails,
-                             "items": [{"title": t} for t in cands[:25]]})
+                             "items": roles[:25]})
         state[url] = {"company": name, "items": sorted(items), "checked": now.isoformat()}
 
     STATE.write_text(json.dumps(state, indent=1))
@@ -169,7 +275,7 @@ def main():
         history = history[:MAX_RUNS]
         HISTORY.write_text(json.dumps(history, indent=1))
     # always re-render so "Last checked" stays current
-    PAGE.write_text(render(history, len(rows), now), encoding="utf-8")
+    PAGE.write_text(render(history, len(rows), now, errors=errors), encoding="utf-8")
 
     if not findings and not errors:
         print("No changes.")
@@ -177,12 +283,15 @@ def main():
     lines = []
     for f in findings:
         lines.append(f"[{'FIRST SCAN' if f['first'] else 'NEW'}] {f['company']} - {f['url']}")
-        lines += [f"   - {i['title']}" for i in f["items"]]
+        lines += [f"   - {i['title']}" + (f"  ({i['loc']})" if i.get("loc") else "") for i in f["items"]]
         if f["emails"]:
             lines.append(f"   apply via: {', '.join(f['emails'])}")
     if errors:
         lines += ["", "Errors:"] + [f"   {e}" for e in errors]
     text = "\n".join(lines)
+    print(text)
+    if any(not f["first"] for f in findings):
+        notify(text, render([history[0]], len(rows), now, inline_css=True))
 
 
 if __name__ == "__main__":
