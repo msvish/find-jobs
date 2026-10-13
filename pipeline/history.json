@@ -1,5 +1,62 @@
 [
  {
+  "checked": "2026-10-13T13:37:09.400653-04:00",
+  "findings": [
+   {
+    "company": "mmstate",
+    "url": "https://explore.msujobs.msstate.edu/jobs/search",
+    "first": false,
+    "emails": [
+     "servicedesk@msstate.edu"
+    ],
+    "items": [
+     {
+      "title": "Data Analyst (Research)"
+     }
+    ]
+   },
+   {
+    "company": "Neptune",
+    "url": "https://jobs.ashbyhq.com/neptune",
+    "first": true,
+    "emails": [],
+    "items": [
+     {
+      "title": "Founding Engineer"
+     }
+    ]
+   },
+   {
+    "company": "Ryan",
+    "url": "https://ryancompanies.wd5.myworkdayjobs.com/en-US/ryancompanies",
+    "first": true,
+    "emails": [
+     "humanresources@ryancompanies.com"
+    ],
+    "items": [
+     {
+      "title": "Commercial Real Estate Lease Analyst"
+     },
+     {
+      "title": "Maintenance Engineer"
+     },
+     {
+      "title": "Maintenance Engineer II"
+     },
+     {
+      "title": "Project Engineer Intern"
+     },
+     {
+      "title": "Senior Project Engineer - National Industrial"
+     }
+    ]
+   }
+  ],
+  "errors": [
+   "Rotto: 429 Client Error: Too Many Requests for url: https://www.rotto.com/careers"
+  ]
+ },
+ {
   "checked": "2026-10-12T15:49:38.678577-04:00",
   "findings": [],
   "errors": [
