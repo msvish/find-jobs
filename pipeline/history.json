@@ -1,5 +1,290 @@
 [
  {
+  "checked": "2026-10-16T07:53:16.083983-07:00",
+  "findings": [
+   {
+    "company": "M&T",
+    "url": "https://mtb.wd5.myworkdayjobs.com/en-US/MTB?jobFamily=e8f67fb24d7c10020c42cd74a1470000",
+    "first": false,
+    "emails": [
+     "careersitesupport@mtb.com"
+    ],
+    "items": [
+     {
+      "title": "Senior Mobile Developer \u2013 Android/iOS",
+      "loc": "Buffalo, NY",
+      "us": "us"
+     }
+    ]
+   },
+   {
+    "company": "Typesafe AI",
+    "url": "https://jobs.ashbyhq.com/typesafe-ai?utm_source=QLrx0vq4BW",
+    "first": false,
+    "emails": [],
+    "items": [
+     {
+      "title": "Console Engineer (Full-Stack)",
+      "loc": "San Francisco Office",
+      "us": "us"
+     },
+     {
+      "title": "Full-Stack/Front-end Engineer",
+      "loc": "San Francisco Office",
+      "us": "us"
+     },
+     {
+      "title": "Infrastructure Engineer (Kubernetes Specialist)",
+      "loc": "San Francisco Office",
+      "us": "us"
+     },
+     {
+      "title": "Model Capabilities Engineer",
+      "loc": "San Francisco Office",
+      "us": "us"
+     },
+     {
+      "title": "Platform & Infra Engineer",
+      "loc": "San Francisco Office",
+      "us": "us"
+     },
+     {
+      "title": "Software Engineer Generalist",
+      "loc": "San Francisco Office",
+      "us": "us"
+     }
+    ]
+   },
+   {
+    "company": "Move Works",
+    "url": "https://www.moveworks.com/us/en/company/careers#open-roles",
+    "first": true,
+    "emails": [],
+    "items": [
+     {
+      "title": "Agentic AI Harness Architect - Moveworks",
+      "loc": "Mountain view, California, United states, Full-time",
+      "us": "us"
+     },
+     {
+      "title": "Agentic Search Infrastructure Engineer - Moveworks",
+      "loc": "Mountain view, California, United states, Full-time",
+      "us": "us"
+     },
+     {
+      "title": "Associate Software Engineer, Core Infrastructure - Moveworks",
+      "loc": "Mountain view, California, United states, Full-time",
+      "us": "us"
+     },
+     {
+      "title": "Machine Learning Engineer, GAI Search Platform - Moveworks",
+      "loc": "Mountain view, California, United states, Full-time",
+      "us": "us"
+     },
+     {
+      "title": "Machine Learning Engineer, GAI Search Relevance - Moveworks",
+      "loc": "Mountain view, California, United states, Full-time",
+      "us": "us"
+     },
+     {
+      "title": "Senior AI Agent Engineer | Moveworks",
+      "loc": "San francisco, California, United states, Full-time",
+      "us": "us"
+     },
+     {
+      "title": "Senior AI Agent Engineer | Moveworks - Federal",
+      "loc": "San francisco, California, United states, Full-time",
+      "us": "us"
+     },
+     {
+      "title": "Senior Agentic Search Infrastructure Engineer - Moveworks",
+      "loc": "Mountain view, California, United states, Full-time",
+      "us": "us"
+     },
+     {
+      "title": "Senior Machine Learning Engineer, Agent Eval Platform",
+      "loc": "Santa clara, California, United states, Full-time",
+      "us": "us"
+     },
+     {
+      "title": "Senior Software Engineer, Agent Eval Platform",
+      "loc": "Mountain view, California, United states, Full-time",
+      "us": "us"
+     },
+     {
+      "title": "Senior Software Engineer, Agentic App Platform - Moveworks",
+      "loc": "Mountain view, California, United states, Full-time",
+      "us": "us"
+     },
+     {
+      "title": "Senior Software Engineer, Agentic Platform - Moveworks",
+      "loc": "Mountain view, California, United states, Full-time",
+      "us": "us"
+     },
+     {
+      "title": "Senior Software Engineer, Agentic Systems - Moveworks",
+      "loc": "Mountain view, California, United states, Full-time",
+      "us": "us"
+     },
+     {
+      "title": "Senior Software Engineer, DevOps - Moveworks",
+      "loc": "Mountain view, California, United states, Full-time",
+      "us": "us"
+     },
+     {
+      "title": "Senior Staff Agentic Search Infrastructure Engineer - Moveworks",
+      "loc": "Mountain view, California, United states, Full-time",
+      "us": "us"
+     },
+     {
+      "title": "Senior Staff Software Engineer, Agentic Systems - Moveworks",
+      "loc": "Mountain view, California, United states, Full-time",
+      "us": "us"
+     },
+     {
+      "title": "Senior Staff Software Engineer, Developer Experience \u2014 Moveworks",
+      "loc": "Mountain view, California, United states, Full-time",
+      "us": "us"
+     },
+     {
+      "title": "Sr. Software Engineer, Fullstack - Moveworks",
+      "loc": "Mountain view, California, United states, Full-time",
+      "us": "us"
+     },
+     {
+      "title": "Staff Machine Learning Engineer, Agent Eval Platform",
+      "loc": "Mountain view, California, United states, Full-time",
+      "us": "us"
+     },
+     {
+      "title": "Staff Machine Learning Engineer, Agentic App Platform",
+      "loc": "Mountain view, California, United states, Full-time",
+      "us": "us"
+     },
+     {
+      "title": "Staff Security Engineer (Compliance) - Moveworks",
+      "loc": "Mountain view, California, United states, Full-time",
+      "us": "us"
+     },
+     {
+      "title": "Staff Security Engineer, Security Operations - Moveworks",
+      "loc": "Mountain view, California, United states, Full-time",
+      "us": "us"
+     },
+     {
+      "title": "Staff Software Engineer, Agent Eval Platform",
+      "loc": "Santa clara, California, United states, Full-time",
+      "us": "us"
+     },
+     {
+      "title": "Staff Software Engineer, Agentic App Platform - Moveworks",
+      "loc": "Mountain view, California, United states, Full-time",
+      "us": "us"
+     },
+     {
+      "title": "Staff Software Engineer, Agentic Systems - Moveworks",
+      "loc": "Mountain view, California, United states, Full-time",
+      "us": "us"
+     }
+    ]
+   },
+   {
+    "company": "Reflection",
+    "url": "https://jobs.ashbyhq.com/reflectionai",
+    "first": true,
+    "emails": [],
+    "items": [
+     {
+      "title": "Forward Deployed Engineer - AI Engineer",
+      "loc": "New York, NY; San Francisco, CA",
+      "us": "us"
+     },
+     {
+      "title": "Forward Deployed Engineer - LLM Post-training",
+      "loc": "San Francisco, CA; New York, NY",
+      "us": "us"
+     },
+     {
+      "title": "Forward Deployed Engineer, Lead - AI Engineer",
+      "loc": "New York, NY; San Francisco, CA",
+      "us": "us"
+     },
+     {
+      "title": "Forward Deployed Engineer, Lead - LLM Post-training",
+      "loc": "New York, NY; San Francisco, CA",
+      "us": "us"
+     },
+     {
+      "title": "GRC Engineer",
+      "loc": "New York, NY; San Francisco, CA",
+      "us": "us"
+     },
+     {
+      "title": "MTS, IT Engineer",
+      "loc": "San Francisco, CA; New York, NY",
+      "us": "us"
+     },
+     {
+      "title": "Member of Technical Staff - Data Ingestion Engineer",
+      "loc": "San Francisco, CA; London; New York, NY",
+      "us": "us"
+     },
+     {
+      "title": "Member of Technical Staff - Research Software Engineer",
+      "loc": "New York, NY; London; San Francisco, CA",
+      "us": "us"
+     },
+     {
+      "title": "Member of Technical Staff - Web Crawl Engineer",
+      "loc": "San Francisco, CA",
+      "us": "us"
+     }
+    ]
+   },
+   {
+    "company": "Litera",
+    "url": "https://litera.wd12.myworkdayjobs.com/en-US/Litera_Careers",
+    "first": true,
+    "emails": [],
+    "items": [
+     {
+      "title": "Associate Software Engineer",
+      "loc": "Denver, CO",
+      "us": "us"
+     },
+     {
+      "title": "Senior Software Engineer",
+      "loc": "Denver, CO",
+      "us": "us"
+     },
+     {
+      "title": "Software Engineer",
+      "loc": "Denver, CO",
+      "us": "us"
+     },
+     {
+      "title": "Software Engineer (C#, .Net, SSAS, ETL, Datawarehouse)",
+      "loc": "Denver, CO",
+      "us": "us"
+     },
+     {
+      "title": "Software Engineer (Dynamics 365)",
+      "loc": "",
+      "us": "unknown"
+     },
+     {
+      "title": "Technical Lead, Software Engineering",
+      "loc": "Denver, CO",
+      "us": "us"
+     }
+    ]
+   }
+  ],
+  "errors": [
+   "Rotto: 429 Client Error: Too Many Requests for url: https://www.rotto.com/careers"
+  ]
+ },
+ {
   "checked": "2026-10-15T08:04:03.843920-07:00",
   "findings": [
    {
