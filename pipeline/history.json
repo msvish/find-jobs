@@ -1,5 +1,12 @@
 [
  {
+  "checked": "2026-10-17T10:29:21.435119-07:00",
+  "findings": [],
+  "errors": [
+   "Rotto: 429 Client Error: Too Many Requests for url: https://www.rotto.com/careers"
+  ]
+ },
+ {
   "checked": "2026-10-17T06:45:08.009486-07:00",
   "findings": [
    {
