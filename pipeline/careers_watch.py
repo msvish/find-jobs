@@ -46,25 +46,40 @@ if not SHEET_ID:
     raise SystemExit("SHEET_ID is not set. In GitHub: Settings > Secrets and variables > Actions > Variables. "
                      "Locally: add SHEET_ID=... to pipeline/.env")
 SHEET_URL = f"https://docs.google.com/spreadsheets/d/{SHEET_ID}/export?format=csv&gid={SHEET_GID}"
-STATE = BASE / "state.json"
-HISTORY = BASE / "history.json"
-PAGE = BASE / "new.html"
-TZ = ZoneInfo("America/Los_Angeles")
+# One script, several watchers: each profile sets its own SHEET_ID, DATA_DIR, REGION and TIMEZONE.
+DATA = BASE / os.getenv("DATA_DIR", "").strip() if os.getenv("DATA_DIR", "").strip() else BASE
+DATA.mkdir(parents=True, exist_ok=True)
+STATE = DATA / "state.json"
+HISTORY = DATA / "history.json"
+PAGE = DATA / "new.html"
+TZ = ZoneInfo(os.getenv("TIMEZONE", "").strip() or "America/Los_Angeles")
 MAX_RUNS = 200  # runs kept in history.json
 
 HEADERS = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
            "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126 Safari/537.36"}
-JOB_WORDS = re.compile(r"\b(engineer|developer|programmer|intern(ship)?|analyst|scientist|architect|"
-                       r"devops|sre|full[- ]?stack|front[- ]?end|back[- ]?end|software|opening|"
-                       r"position|hiring|vacanc(y|ies))\b", re.I)
+_DEFAULT_ROLES = (r"engineer|developer|programmer|intern(ship)?|analyst|scientist|architect|devops|sre|"
+                  r"full[- ]?stack|front[- ]?end|back[- ]?end|software|opening|position|hiring|vacanc(y|ies)")
+# ROLE_WORDS replaces the default list for a different field; JOB_WORDS adds to whichever list is used.
+# Both are comma-separated regex pieces, e.g. ROLE_WORDS="financ\w*,tax(ation|es)?,fp&a"
+_extra = lambda var: [w.strip() for w in os.getenv(var, "").split(",") if w.strip()]
+JOB_WORDS = re.compile(r"(?<![A-Za-z])(" + "|".join(_extra("ROLE_WORDS") or [_DEFAULT_ROLES]) +
+                       "".join("|" + w for w in _extra("JOB_WORDS")) + r")(?![A-Za-z])", re.I)
+# ROLE_KEYWORDS (comma-separated) replaces JOB_WORDS entirely: only titles containing one of them count.
+# Used for a profile in another field, e.g. ROLE_KEYWORDS="financial analyst,fp&a,tax analyst"
+_rk = [k.strip() for k in os.getenv("ROLE_KEYWORDS", "").split(",") if k.strip()]
+ROLE_KEYWORDS = re.compile(r"(?<![A-Za-z])(?:" + "|".join(re.escape(k).replace(r"\ ", r"\s+") for k in _rk) + r")(?![A-Za-z])",
+                           re.I) if _rk else None
 NOISE = re.compile(r"(cookie|privacy|terms of|copyright|©|subscribe|newsletter|log ?in|sign ?up)", re.I)
 EMAIL = re.compile(r"[\w.+-]+@[\w-]+\.[a-z]{2,}(?:\.[a-z]{2,})?", re.I)
 
 
-# --- United States filter ---------------------------------------------------------------
-# Set the repo variable US_ONLY=no to turn this off. Roles whose location can't be read are kept
+# --- Location filter --------------------------------------------------------------------
+# REGION=US (default) keeps US roles, REGION=IN keeps India roles, REGION=ALL keeps everything.
+# (Old setting US_ONLY=no still works and means ALL.) Roles whose location can't be read are kept
 # (shown as "Location not listed") rather than silently dropped.
-US_ONLY = (os.getenv("US_ONLY") or "yes").strip().lower() not in ("no", "n", "false", "0")
+REGION = (os.getenv("REGION") or "US").strip().upper()
+if (os.getenv("US_ONLY") or "").strip().lower() in ("no", "n", "false", "0"):
+    REGION = "ALL"
 
 _ABBR = ("AL AK AZ AR CA CO CT DE FL GA HI ID IL IN IA KS KY LA ME MD MA MI MN MS MO MT NE NV NH NJ NM NY "
          "NC ND OH OK OR PA RI SC SD TN TX UT VT VA WA WV WI WY DC").split()
@@ -92,15 +107,42 @@ FOREIGN_MARK = re.compile(
     r"Ottawa|Calgary|Bangalore|Bengaluru|Hyderabad|Pune|Chennai|Mumbai|Delhi|Gurgaon|Gurugram|Noida|"
     r"Manila|Sao Paulo|S[aã]o Paulo|Mexico City|Europe|Asia)\b|(?<!New )\bMexico\b|\b(?:EMEA|APAC|LATAM|DACH)\b",
     re.I)
+IN_MARK = re.compile(
+    r"\b(?:India|Bharat|Bangalore|Bengaluru|Hyderabad|Secunderabad|Pune|Chennai|Mumbai|Navi Mumbai|Thane|"
+    r"New Delhi|Delhi|Delhi NCR|NCR|Gurgaon|Gurugram|Noida|Greater Noida|Faridabad|Ghaziabad|Kolkata|"
+    r"Ahmedabad|Gandhinagar|Vadodara|Surat|Kochi|Cochin|Thiruvananthapuram|Trivandrum|Coimbatore|Madurai|"
+    r"Mysore|Mysuru|Mangalore|Mangaluru|Hubli|Belgaum|Jaipur|Chandigarh|Mohali|Indore|Bhopal|Nagpur|Nashik|"
+    r"Lucknow|Kanpur|Bhubaneswar|Visakhapatnam|Vizag|Vijayawada|Goa|Panaji|Guwahati|Patna|Ranchi|Dehradun|"
+    r"Karnataka|Maharashtra|Telangana|Tamil Nadu|Kerala|Andhra Pradesh|Gujarat|Haryana|Uttar Pradesh|"
+    r"West Bengal|Rajasthan|Punjab|Odisha|Madhya Pradesh)\b|(?<![A-Za-z])IND(?![A-Za-z])")
+# PLACES narrows REGION to specific cities/states, e.g. PLACES="Bengaluru,Bangalore,Karnataka".
+# Roles naming another place are dropped; roles with no location are still kept.
+_pl = [p.strip() for p in os.getenv("PLACES", "").split(",") if p.strip()]
+PLACES = re.compile(r"\b(?:" + "|".join(re.escape(p).replace(r"\ ", r"\s+") for p in _pl) + r")\b", re.I) if _pl else None
+CODES = {"US": ("US", "USA"), "IN": ("IN", "IND")}  # Taleo-style "US-AL-Birmingham", "IN-KA-Bangalore"
 
 
-def us_status(text):
-    """'us' (a US location is named), 'foreign' (only non-US places named) or 'unknown' (can't tell)."""
-    if US_MARK.search(text) or US_MARK_CI.search(text):
-        return "us"          # checked first, so "Paris, TX" is US and "NYC or London" counts as US
-    if FOREIGN_MARK.search(text):
-        return "foreign"
-    return "unknown"
+def is_us(text):
+    if US_MARK_CI.search(text):
+        return True
+    india = IN_MARK.search(text)  # ", IN" next to an Indian city is India, not Indiana
+    return any(not (india and m.group().replace(",", "").strip() == "IN") for m in US_MARK.finditer(text))
+
+
+def region_status(text):
+    """'match' (a place in REGION is named), 'foreign' (only other places named) or 'unknown' (can't tell).
+    The REGION check runs first, so "Bangalore or London" counts as India and "NYC or London" as US."""
+    if PLACES:
+        if PLACES.search(text):
+            return "match"
+        return "foreign" if IN_MARK.search(text) or is_us(text) or FOREIGN_MARK.search(text) else "unknown"
+    if REGION == "IN":
+        if IN_MARK.search(text):
+            return "match"
+        return "foreign" if is_us(text) or FOREIGN_MARK.search(text) else "unknown"
+    if is_us(text):  # US (also used for display when REGION=ALL)
+        return "match"
+    return "foreign" if FOREIGN_MARK.search(text) else "unknown"
 
 
 def guess_location(ctx, title=""):
@@ -109,10 +151,10 @@ def guess_location(ctx, title=""):
         seg = " ".join(seg.split())
         if not seg or seg == title or len(seg) > 60:
             continue
-        m = re.fullmatch(r"US-([A-Z]{2})-(.+)", seg)  # Taleo style: US-AL-Birmingham
-        if m:
-            return f"{m.group(2)}, {m.group(1)}"
-        if us_status(seg) == "us":
+        m = re.fullmatch(r"([A-Z]{2,3})-([A-Z]{2})-(.+)", seg)  # Taleo style: US-AL-Birmingham
+        if m and m.group(1) in CODES.get(REGION, ("US", "USA")):
+            return f"{m.group(3)}, {m.group(2)}"
+        if region_status(seg) == "match" or (REGION == "ALL" and FOREIGN_MARK.search(seg)):
             return seg
     return "Remote" if re.search(r"\bremote\b", f"{ctx} {title}", re.I) else ""
 
@@ -253,17 +295,23 @@ def main():
             continue
         prev = state.get(url)
         old = set(prev["items"]) if prev else set()
-        cands = sorted(t for t in items if t not in old and looks_like_title(t) and JOB_WORDS.search(t))
+        is_role = ROLE_KEYWORDS.search if ROLE_KEYWORDS else JOB_WORDS.search
+        cands = sorted(t for t in items if t not in old and looks_like_title(t) and is_role(t))
         if row["keywords"]:
             cands = [t for t in cands if any(k in t.lower() for k in row["keywords"])]
         cands = drop_merged(cands, items, ctx)
         roles = []
         for t in cands:
-            where = f"{t} {ctx.get(t, '')}"
-            status = us_status(where)
-            if US_ONLY and status == "foreign":
-                continue  # outside the US: still in state.json, so it never comes back as "new" later
-            roles.append({"title": t, "loc": guess_location(ctx.get(t, ""), t), "us": status})
+            m = next((x for x in (re.fullmatch(r"([A-Z]{2,3})-[A-Z]{2}-.+", seg.strip())
+                                  for seg in ctx.get(t, "").split("|")) if x), None)
+            status = region_status(f"{t} {ctx.get(t, '')}")
+            if m and REGION in CODES and m.group(1) not in CODES[REGION]:  # explicit country code beats guessing
+                status = "foreign"
+            elif m and REGION in CODES and not PLACES:
+                status = "match"
+            if REGION != "ALL" and status == "foreign":
+                continue  # wrong country: still in state.json, so it never comes back as "new" later
+            roles.append({"title": t, "loc": guess_location(ctx.get(t, ""), t), "ok": status})
         if roles:
             findings.append({"company": name, "url": url, "first": prev is None, "emails": emails,
                              "items": roles[:25]})
