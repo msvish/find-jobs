@@ -1,5 +1,69 @@
 [
  {
+  "checked": "2026-10-17T06:45:08.009486-07:00",
+  "findings": [
+   {
+    "company": "University of Alabama",
+    "url": "https://uab.taleo.net/careersection/ext/jobsearch.ftl",
+    "first": false,
+    "emails": [],
+    "items": [
+     {
+      "title": "INFORMATICS ANALYST II",
+      "loc": "",
+      "us": "unknown"
+     },
+     {
+      "title": "SCIENTIST II",
+      "loc": "",
+      "us": "unknown"
+     },
+     {
+      "title": "SCIENTIST III",
+      "loc": "",
+      "us": "unknown"
+     }
+    ]
+   },
+   {
+    "company": "M&T",
+    "url": "https://mtb.wd5.myworkdayjobs.com/en-US/MTB?jobFamily=e8f67fb24d7c10020c42cd74a1470000",
+    "first": false,
+    "emails": [
+     "careersitesupport@mtb.com"
+    ],
+    "items": [
+     {
+      "title": "Senior Software Engineer - CIAM",
+      "loc": "Buffalo, NY",
+      "us": "us"
+     }
+    ]
+   },
+   {
+    "company": "Lila Sciences",
+    "url": "https://job-boards.greenhouse.io/lilasciences?departments%5B%5D=4022721009&departments%5B%5D=4011901009",
+    "first": false,
+    "emails": [],
+    "items": [
+     {
+      "title": "Staff / Principal Research Engineer, AI Safety Mitigations",
+      "loc": "Cambridge, MA USA; London, UK; San Francisco, CA USA",
+      "us": "us"
+     },
+     {
+      "title": "Staff Software Engineer, AI Safety",
+      "loc": "Cambridge, MA USA; London, UK; San Francisco, CA USA",
+      "us": "us"
+     }
+    ]
+   }
+  ],
+  "errors": [
+   "Rotto: 429 Client Error: Too Many Requests for url: https://www.rotto.com/careers"
+  ]
+ },
+ {
   "checked": "2026-10-16T07:53:16.083983-07:00",
   "findings": [
    {
