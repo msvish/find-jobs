@@ -1,0 +1,17 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>No new roles this week | Career watch</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="report.css"></head><body><div class="wrap">
+<header><h1>No new roles this week</h1>
+<p class="meta">Watching 2 career pages. Last checked Oct 17 at 11:07 PM PT.</p>
+<div class="tools"><input type="search" id="q" placeholder="Filter by role or company" aria-label="Filter by role or company"></div></header>
+<main><p class="empty">No new roles in the last 2 days. Everything already listed is kept for comparison.</p></main></div><script>
+const q=document.getElementById('q');
+q.addEventListener('input',()=>{const t=q.value.trim().toLowerCase();
+document.querySelectorAll('.co').forEach(co=>{let any=false;const c=co.dataset.company;
+co.querySelectorAll('.roles li').forEach(li=>{const m=!t||c.includes(t)||li.textContent.toLowerCase().includes(t);li.hidden=!m;any=any||m});
+co.hidden=!any});});
+</script></body></html>

@@ -1,0 +1,49 @@
+[
+ {
+  "checked": "2026-10-17T23:07:19.790394+05:30",
+  "findings": [
+   {
+    "company": "Hp",
+    "url": "https://hp.wd5.myworkdayjobs.com/en-US/ExternalCareerSite/details/Financial-Analyst_3168548-1?primaryLocation=336ea9b27e9910b2190cf5b2b198f6b3",
+    "first": true,
+    "emails": [],
+    "items": [
+     {
+      "title": "Financial Analyst",
+      "loc": "Bengaluru, Karnataka, India",
+      "ok": "match"
+     },
+     {
+      "title": "Financial Analyst 4",
+      "loc": "",
+      "ok": "unknown"
+     },
+     {
+      "title": "Financial Analyst-Lease Enablement",
+      "loc": "Bengaluru, Karnataka, India",
+      "ok": "match"
+     },
+     {
+      "title": "Supply Chain Financial Analyst",
+      "loc": "Bengaluru, Karnataka, India",
+      "ok": "match"
+     }
+    ]
+   },
+   {
+    "company": "Amazon",
+    "url": "https://amazon.jobs/content/en/job-categories/fgbs?country%5B%5D=IN",
+    "first": true,
+    "emails": [],
+    "items": [
+     {
+      "title": "Corporate FP&A",
+      "loc": "",
+      "ok": "unknown"
+     }
+    ]
+   }
+  ],
+  "errors": []
+ }
+]
