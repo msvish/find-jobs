@@ -1,5 +1,43 @@
 [
  {
+  "checked": "2026-10-18T07:02:48.968971-07:00",
+  "findings": [
+   {
+    "company": "UCLA",
+    "url": "https://jobs.universityofcalifornia.edu/site/advancedsearch?keywords=&Campus%5Bcampus_id%5D=&multiple_locations=0&search=",
+    "first": false,
+    "emails": [
+     "hr@ucop.edu"
+    ],
+    "items": [
+     {
+      "title": "Compensation Analyst",
+      "loc": "",
+      "ok": "unknown"
+     },
+     {
+      "title": "Share Compensation Analyst by email",
+      "loc": "",
+      "ok": "unknown"
+     },
+     {
+      "title": "Share Compensation Analyst on Social Media",
+      "loc": "",
+      "ok": "unknown"
+     },
+     {
+      "title": "View full Compensation Analyst job description at",
+      "loc": "",
+      "ok": "unknown"
+     }
+    ]
+   }
+  ],
+  "errors": [
+   "Rotto: 429 Client Error: Too Many Requests for url: https://www.rotto.com/careers"
+  ]
+ },
+ {
   "checked": "2026-10-17T10:35:47.202916-07:00",
   "findings": [],
   "errors": [
