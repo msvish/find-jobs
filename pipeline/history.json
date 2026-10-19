@@ -1,5 +1,33 @@
 [
  {
+  "checked": "2026-10-19T10:00:03.342431-07:00",
+  "findings": [
+   {
+    "company": "M&T",
+    "url": "https://mtb.wd5.myworkdayjobs.com/en-US/MTB?jobFamily=e8f67fb24d7c10020c42cd74a1470000",
+    "first": false,
+    "emails": [
+     "careersitesupport@mtb.com"
+    ],
+    "items": [
+     {
+      "title": "Distinguished Software Engineer",
+      "loc": "Wilmington, DE",
+      "ok": "match"
+     },
+     {
+      "title": "Software Engineer - .Net / API",
+      "loc": "Philadelphia, PA",
+      "ok": "match"
+     }
+    ]
+   }
+  ],
+  "errors": [
+   "Rotto: 429 Client Error: Too Many Requests for url: https://www.rotto.com/careers"
+  ]
+ },
+ {
   "checked": "2026-10-18T07:02:48.968971-07:00",
   "findings": [
    {
