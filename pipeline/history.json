@@ -1,5 +1,157 @@
 [
  {
+  "checked": "2026-10-20T08:07:43.546339-07:00",
+  "findings": [
+   {
+    "company": "University of Rochester",
+    "url": "https://rochester.wd5.myworkdayjobs.com/en-US/UR_Staff?source=LinkedIn",
+    "first": false,
+    "emails": [],
+    "items": [
+     {
+      "title": "Data Analyst II",
+      "loc": "Remote Work - New York",
+      "ok": "match"
+     }
+    ]
+   },
+   {
+    "company": "Unframe",
+    "url": "https://job-boards.eu.greenhouse.io/unframe",
+    "first": true,
+    "emails": [],
+    "items": [
+     {
+      "title": "AI Transformation Architect",
+      "loc": "",
+      "ok": "match"
+     },
+     {
+      "title": "Full Stack Software Engineer (North Carolina)",
+      "loc": "North Carolina, USA",
+      "ok": "match"
+     },
+     {
+      "title": "Full Stack Software Engineer (Remote) New",
+      "loc": "Austin, Texas, United States",
+      "ok": "match"
+     },
+     {
+      "title": "Senior Enterprise Support Engineer (Remote)",
+      "loc": "New York, New York, United States",
+      "ok": "match"
+     }
+    ]
+   },
+   {
+    "company": "cohere",
+    "url": "https://job-boards.greenhouse.io/coherehealth?departments%5B%5D=4091050003",
+    "first": true,
+    "emails": [],
+    "items": [
+     {
+      "title": "Data Scientist II",
+      "loc": "United States",
+      "ok": "match"
+     },
+     {
+      "title": "Healthcare Analyst II",
+      "loc": "United States",
+      "ok": "match"
+     },
+     {
+      "title": "Lead Forward Deployed Healthcare Analyst New",
+      "loc": "United States",
+      "ok": "match"
+     },
+     {
+      "title": "Lead Healthcare Analyst",
+      "loc": "United States",
+      "ok": "match"
+     },
+     {
+      "title": "Lead Software Engineer - Integrations",
+      "loc": "United States",
+      "ok": "match"
+     },
+     {
+      "title": "Senior Actuarial Analyst",
+      "loc": "United States",
+      "ok": "match"
+     },
+     {
+      "title": "Senior Actuarial Support Analyst",
+      "loc": "United States",
+      "ok": "match"
+     },
+     {
+      "title": "Senior Integration Analyst",
+      "loc": "United States",
+      "ok": "match"
+     },
+     {
+      "title": "Software Engineer II",
+      "loc": "United States",
+      "ok": "match"
+     },
+     {
+      "title": "Software Engineering",
+      "loc": "",
+      "ok": "unknown"
+     },
+     {
+      "title": "Sr. Forward Deployed Engineer",
+      "loc": "United States",
+      "ok": "match"
+     },
+     {
+      "title": "Sr. Forward Deployed Healthcare Analyst New",
+      "loc": "United States",
+      "ok": "match"
+     },
+     {
+      "title": "Sr. Software Engineer, Data Platform",
+      "loc": "United States",
+      "ok": "match"
+     },
+     {
+      "title": "Staff Software Engineer United States",
+      "loc": "",
+      "ok": "match"
+     }
+    ]
+   },
+   {
+    "company": "Abaka",
+    "url": "https://www.abaka.ai/careers",
+    "first": true,
+    "emails": [
+     "business@abaka.ai"
+    ],
+    "items": [
+     {
+      "title": "Data Acquisition Engineer",
+      "loc": "Palo Alto, CA",
+      "ok": "match"
+     },
+     {
+      "title": "Data Engineer",
+      "loc": "Palo Alto, CA",
+      "ok": "match"
+     },
+     {
+      "title": "Machine Learning Engineer",
+      "loc": "Palo Alto, CA",
+      "ok": "match"
+     }
+    ]
+   }
+  ],
+  "errors": [
+   "Rotto: 429 Client Error: Too Many Requests for url: https://www.rotto.com/careers"
+  ]
+ },
+ {
   "checked": "2026-10-19T10:00:03.342431-07:00",
   "findings": [
    {
