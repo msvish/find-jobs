@@ -1,5 +1,26 @@
 [
  {
+  "checked": "2026-10-23T08:07:06.530047-07:00",
+  "findings": [
+   {
+    "company": "cohere",
+    "url": "https://job-boards.greenhouse.io/coherehealth?departments%5B%5D=4091050003",
+    "first": false,
+    "emails": [],
+    "items": [
+     {
+      "title": "Lead Forward Deployed Healthcare Analyst New",
+      "loc": "United States",
+      "ok": "match"
+     }
+    ]
+   }
+  ],
+  "errors": [
+   "Rotto: 429 Client Error: Too Many Requests for url: https://www.rotto.com/careers"
+  ]
+ },
+ {
   "checked": "2026-10-22T08:19:20.017357-07:00",
   "findings": [
    {
