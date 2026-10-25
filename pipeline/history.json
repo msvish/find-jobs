@@ -1,5 +1,41 @@
 [
  {
+  "checked": "2026-10-25T07:23:52.014113-07:00",
+  "findings": [
+   {
+    "company": "Gradial",
+    "url": "https://job-boards.greenhouse.io/gradial?gh_src=bh1uowf59us",
+    "first": false,
+    "emails": [],
+    "items": [
+     {
+      "title": "Forward Deployed Analyst New",
+      "loc": "New York City, NY; San Francisco, CA; Seattle, WA",
+      "ok": "match"
+     },
+     {
+      "title": "Software Engineer New",
+      "loc": "Seattle, WA",
+      "ok": "match"
+     },
+     {
+      "title": "Staff Security Engineer, AI New",
+      "loc": "Seattle, WA",
+      "ok": "match"
+     },
+     {
+      "title": "Staff Security Engineer, Product & Platform New",
+      "loc": "Seattle, WA",
+      "ok": "match"
+     }
+    ]
+   }
+  ],
+  "errors": [
+   "Rotto: 429 Client Error: Too Many Requests for url: https://www.rotto.com/careers"
+  ]
+ },
+ {
   "checked": "2026-10-24T07:02:00.603515-07:00",
   "findings": [
    {
