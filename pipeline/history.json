@@ -1,5 +1,128 @@
 [
  {
+  "checked": "2026-10-27T08:54:06.134975-07:00",
+  "findings": [
+   {
+    "company": "University of Alabama",
+    "url": "https://uab.taleo.net/careersection/ext/jobsearch.ftl",
+    "first": false,
+    "emails": [],
+    "items": [
+     {
+      "title": "INFORMATICS ANALYST I",
+      "loc": "",
+      "ok": "unknown"
+     }
+    ]
+   },
+   {
+    "company": "UCLA",
+    "url": "https://jobs.universityofcalifornia.edu/site/advancedsearch?keywords=&Campus%5Bcampus_id%5D=&multiple_locations=0&search=",
+    "first": false,
+    "emails": [
+     "hr@ucop.edu"
+    ],
+    "items": [
+     {
+      "title": "Academic HR Analyst 2",
+      "loc": "",
+      "ok": "unknown"
+     },
+     {
+      "title": "Clinical Engineer 3",
+      "loc": "",
+      "ok": "unknown"
+     },
+     {
+      "title": "Share Academic HR Analyst 2 by email",
+      "loc": "",
+      "ok": "unknown"
+     },
+     {
+      "title": "Share Academic HR Analyst 2 on Social Media",
+      "loc": "",
+      "ok": "unknown"
+     },
+     {
+      "title": "Share Clinical Engineer 3 by email",
+      "loc": "",
+      "ok": "unknown"
+     },
+     {
+      "title": "Share Clinical Engineer 3 on Social Media",
+      "loc": "",
+      "ok": "unknown"
+     },
+     {
+      "title": "View full Clinical Engineer 3 job description at",
+      "loc": "",
+      "ok": "unknown"
+     }
+    ]
+   },
+   {
+    "company": "Lila Sciences",
+    "url": "https://job-boards.greenhouse.io/lilasciences?departments%5B%5D=4022721009&departments%5B%5D=4011901009",
+    "first": false,
+    "emails": [],
+    "items": [
+     {
+      "title": "Staff/Principal Engineer, Search & Retrieval",
+      "loc": "San Francisco, CA USA",
+      "ok": "match"
+     }
+    ]
+   },
+   {
+    "company": "University of Rochester",
+    "url": "https://rochester.wd5.myworkdayjobs.com/en-US/UR_Staff?source=LinkedIn",
+    "first": false,
+    "emails": [],
+    "items": [
+     {
+      "title": "Research Compliance Analyst",
+      "loc": "Remote",
+      "ok": "unknown"
+     },
+     {
+      "title": "Staff Scientist",
+      "loc": "",
+      "ok": "unknown"
+     }
+    ]
+   },
+   {
+    "company": "Litera",
+    "url": "https://litera.wd12.myworkdayjobs.com/en-US/Litera_Careers",
+    "first": false,
+    "emails": [],
+    "items": [
+     {
+      "title": "Senior Site Reliability Engineer",
+      "loc": "Denver, CO",
+      "ok": "match"
+     }
+    ]
+   },
+   {
+    "company": "cohere",
+    "url": "https://job-boards.greenhouse.io/coherehealth?departments%5B%5D=4091050003",
+    "first": false,
+    "emails": [],
+    "items": [
+     {
+      "title": "Lead Forward Deployed Healthcare Analyst",
+      "loc": "United States",
+      "ok": "match"
+     }
+    ]
+   }
+  ],
+  "errors": [
+   "Rotto: 429 Client Error: Too Many Requests for url: https://www.rotto.com/careers"
+  ]
+ },
+ {
   "checked": "2026-10-26T09:56:56.470943-07:00",
   "findings": [
    {
