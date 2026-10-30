@@ -1,5 +1,69 @@
 [
  {
+  "checked": "2026-10-30T09:42:48.946177-07:00",
+  "findings": [
+   {
+    "company": "M&T",
+    "url": "https://mtb.wd5.myworkdayjobs.com/en-US/MTB?jobFamily=e8f67fb24d7c10020c42cd74a1470000",
+    "first": false,
+    "emails": [
+     "careersitesupport@mtb.com"
+    ],
+    "items": [
+     {
+      "title": "Senior Software Engineer - Salesforce, Java",
+      "loc": "Buffalo, NY",
+      "ok": "match"
+     },
+     {
+      "title": "Senior Software Engineer \u2013 C#, .NET",
+      "loc": "Buffalo, NY",
+      "ok": "match"
+     },
+     {
+      "title": "Software Engineer - Liquidity Reporting",
+      "loc": "Buffalo, NY",
+      "ok": "match"
+     }
+    ]
+   },
+   {
+    "company": "cohere",
+    "url": "https://job-boards.greenhouse.io/coherehealth?departments%5B%5D=4091050003",
+    "first": false,
+    "emails": [],
+    "items": [
+     {
+      "title": "Senior AI Engineer",
+      "loc": "United States",
+      "ok": "match"
+     },
+     {
+      "title": "Senior Integration Analyst",
+      "loc": "United States",
+      "ok": "match"
+     }
+    ]
+   },
+   {
+    "company": "Gradial",
+    "url": "https://job-boards.greenhouse.io/gradial?gh_src=bh1uowf59us",
+    "first": false,
+    "emails": [],
+    "items": [
+     {
+      "title": "Forward Deployed Analyst",
+      "loc": "New York City, NY; San Francisco, CA; Seattle, WA",
+      "ok": "match"
+     }
+    ]
+   }
+  ],
+  "errors": [
+   "Rotto: 429 Client Error: Too Many Requests for url: https://www.rotto.com/careers"
+  ]
+ },
+ {
   "checked": "2026-10-29T09:56:37.800491-07:00",
   "findings": [
    {
