@@ -1,5 +1,41 @@
 [
  {
+  "checked": "2026-10-31T08:45:15.772667-07:00",
+  "findings": [
+   {
+    "company": "UCLA",
+    "url": "https://jobs.universityofcalifornia.edu/site/advancedsearch?keywords=&Campus%5Bcampus_id%5D=&multiple_locations=0&search=",
+    "first": false,
+    "emails": [
+     "hr@ucop.edu"
+    ],
+    "items": [
+     {
+      "title": "(CLS) Clinical Lab Scientist - Urology",
+      "loc": "San Diego Health System",
+      "ok": "match"
+     }
+    ]
+   },
+   {
+    "company": "University of Rochester",
+    "url": "https://rochester.wd5.myworkdayjobs.com/en-US/UR_Staff?source=LinkedIn",
+    "first": false,
+    "emails": [],
+    "items": [
+     {
+      "title": "Revenue Cycle Analyst",
+      "loc": "Remote",
+      "ok": "unknown"
+     }
+    ]
+   }
+  ],
+  "errors": [
+   "Rotto: 429 Client Error: Too Many Requests for url: https://www.rotto.com/careers"
+  ]
+ },
+ {
   "checked": "2026-10-30T09:42:48.946177-07:00",
   "findings": [
    {
