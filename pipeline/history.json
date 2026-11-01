@@ -1,5 +1,26 @@
 [
  {
+  "checked": "2026-11-01T08:49:34.135576-08:00",
+  "findings": [
+   {
+    "company": "University of Alabama",
+    "url": "https://uab.taleo.net/careersection/ext/jobsearch.ftl",
+    "first": false,
+    "emails": [],
+    "items": [
+     {
+      "title": "COMPUTATIONAL SCIENTIST ASSOCIATE",
+      "loc": "",
+      "ok": "unknown"
+     }
+    ]
+   }
+  ],
+  "errors": [
+   "Rotto: 429 Client Error: Too Many Requests for url: https://www.rotto.com/careers"
+  ]
+ },
+ {
   "checked": "2026-10-31T08:45:15.772667-07:00",
   "findings": [
    {
