@@ -1,5 +1,51 @@
 [
  {
+  "checked": "2026-11-03T09:52:01.970027-08:00",
+  "findings": [
+   {
+    "company": "M&T",
+    "url": "https://mtb.wd5.myworkdayjobs.com/en-US/MTB?jobFamily=e8f67fb24d7c10020c42cd74a1470000",
+    "first": false,
+    "emails": [
+     "careersitesupport@mtb.com"
+    ],
+    "items": [
+     {
+      "title": "Lead Software Engineer \u2013 Java, MS SQL",
+      "loc": "Buffalo, NY",
+      "ok": "match"
+     },
+     {
+      "title": "Senior Software Engineer - Enterprise Design System",
+      "loc": "Buffalo, NY",
+      "ok": "match"
+     }
+    ]
+   },
+   {
+    "company": "cohere",
+    "url": "https://job-boards.greenhouse.io/coherehealth?departments%5B%5D=4091050003",
+    "first": false,
+    "emails": [],
+    "items": [
+     {
+      "title": "Software Engineer I, Integrations",
+      "loc": "United States",
+      "ok": "match"
+     },
+     {
+      "title": "Sr. Software Engineer, Data Platform",
+      "loc": "United States",
+      "ok": "match"
+     }
+    ]
+   }
+  ],
+  "errors": [
+   "Rotto: 429 Client Error: Too Many Requests for url: https://www.rotto.com/careers"
+  ]
+ },
+ {
   "checked": "2026-11-02T12:23:21.241228-08:00",
   "findings": [
    {
