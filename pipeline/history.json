@@ -1,5 +1,69 @@
 [
  {
+  "checked": "2026-11-09T12:46:45.947012-08:00",
+  "findings": [
+   {
+    "company": "M&T",
+    "url": "https://mtb.wd5.myworkdayjobs.com/en-US/MTB?jobFamily=e8f67fb24d7c10020c42cd74a1470000",
+    "first": false,
+    "emails": [
+     "careersitesupport@mtb.com"
+    ],
+    "items": [
+     {
+      "title": "Software Engineer - Financial Crimes",
+      "loc": "Buffalo, NY",
+      "ok": "match"
+     }
+    ]
+   },
+   {
+    "company": "Lila Sciences",
+    "url": "https://job-boards.greenhouse.io/lilasciences?departments%5B%5D=4022721009&departments%5B%5D=4011901009",
+    "first": false,
+    "emails": [],
+    "items": [
+     {
+      "title": "Co-op, Software, Applied AI Platform Engineer",
+      "loc": "San Francisco, CA USA",
+      "ok": "match"
+     },
+     {
+      "title": "Machine Learning Scientist, AI for Protein Engineering",
+      "loc": "San Francisco, CA USA",
+      "ok": "match"
+     },
+     {
+      "title": "Machine Learning Scientist, BioML",
+      "loc": "San Francisco, CA USA",
+      "ok": "match"
+     },
+     {
+      "title": "Machine Learning Scientist, Protein Design",
+      "loc": "San Francisco, CA USA",
+      "ok": "match"
+     }
+    ]
+   },
+   {
+    "company": "Move Works",
+    "url": "https://www.moveworks.com/us/en/company/careers#open-roles",
+    "first": false,
+    "emails": [],
+    "items": [
+     {
+      "title": "Staff AI Agent Engineer | Moveworks",
+      "loc": "Des moines, Iowa, United states, Full-time",
+      "ok": "match"
+     }
+    ]
+   }
+  ],
+  "errors": [
+   "Rotto: 429 Client Error: Too Many Requests for url: https://www.rotto.com/careers"
+  ]
+ },
+ {
   "checked": "2026-11-08T08:41:37.413802-08:00",
   "findings": [],
   "errors": [
