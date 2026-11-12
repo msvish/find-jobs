@@ -1,5 +1,119 @@
 [
  {
+  "checked": "2026-11-12T10:21:14.552960-08:00",
+  "findings": [
+   {
+    "company": "University of Alabama",
+    "url": "https://uab.taleo.net/careersection/ext/jobsearch.ftl",
+    "first": false,
+    "emails": [],
+    "items": [
+     {
+      "title": "PROJECT MANAGER-FACILITIES ELECTRICAL ENGINEER",
+      "loc": "",
+      "ok": "unknown"
+     },
+     {
+      "title": "PROSPECT RESEARCH ANALYST",
+      "loc": "",
+      "ok": "unknown"
+     },
+     {
+      "title": "RESEARCH SCIENTIST",
+      "loc": "",
+      "ok": "unknown"
+     }
+    ]
+   },
+   {
+    "company": "M&T",
+    "url": "https://mtb.wd5.myworkdayjobs.com/en-US/MTB?jobFamily=e8f67fb24d7c10020c42cd74a1470000",
+    "first": false,
+    "emails": [
+     "careersitesupport@mtb.com"
+    ],
+    "items": [
+     {
+      "title": "Software Engineer - Oracle Cloud Applications",
+      "loc": "Buffalo, NY",
+      "ok": "match"
+     }
+    ]
+   },
+   {
+    "company": "UCLA",
+    "url": "https://jobs.universityofcalifornia.edu/site/advancedsearch?keywords=&Campus%5Bcampus_id%5D=&multiple_locations=0&search=",
+    "first": false,
+    "emails": [
+     "hr@ucop.edu"
+    ],
+    "items": [
+     {
+      "title": "Metagenome Research Scientist",
+      "loc": "",
+      "ok": "unknown"
+     },
+     {
+      "title": "Research Scientist",
+      "loc": "",
+      "ok": "unknown"
+     },
+     {
+      "title": "Share Metagenome Research Scientist by email",
+      "loc": "",
+      "ok": "unknown"
+     },
+     {
+      "title": "Share Metagenome Research Scientist on Social Media",
+      "loc": "",
+      "ok": "unknown"
+     },
+     {
+      "title": "Share Research Scientist by email",
+      "loc": "",
+      "ok": "unknown"
+     },
+     {
+      "title": "Share Research Scientist on Social Media",
+      "loc": "",
+      "ok": "unknown"
+     },
+     {
+      "title": "View full Metagenome Research Scientist job description at",
+      "loc": "",
+      "ok": "unknown"
+     },
+     {
+      "title": "View full Research Scientist job description at",
+      "loc": "",
+      "ok": "unknown"
+     }
+    ]
+   },
+   {
+    "company": "Typesafe AI",
+    "url": "https://jobs.ashbyhq.com/typesafe-ai?utm_source=QLrx0vq4BW",
+    "first": false,
+    "emails": [],
+    "items": [
+     {
+      "title": "Forward Deployed Engineer",
+      "loc": "San Francisco Office",
+      "ok": "match"
+     },
+     {
+      "title": "Security & Trust Analyst",
+      "loc": "San Francisco Office",
+      "ok": "match"
+     }
+    ]
+   }
+  ],
+  "errors": [
+   "Rotto: 429 Client Error: Too Many Requests for url: https://www.rotto.com/careers"
+  ]
+ },
+ {
   "checked": "2026-11-11T09:54:59.830832-08:00",
   "findings": [
    {
