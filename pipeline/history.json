@@ -1,5 +1,109 @@
 [
  {
+  "checked": "2026-11-14T08:37:15.470884-08:00",
+  "findings": [
+   {
+    "company": "M&T",
+    "url": "https://mtb.wd5.myworkdayjobs.com/en-US/MTB?jobFamily=e8f67fb24d7c10020c42cd74a1470000",
+    "first": false,
+    "emails": [
+     "careersitesupport@mtb.com"
+    ],
+    "items": [
+     {
+      "title": "Senior/Lead Forward Design AI Engineer \u2013 Genesys Cloud",
+      "loc": "Buffalo, NY",
+      "ok": "match"
+     }
+    ]
+   },
+   {
+    "company": "UCLA",
+    "url": "https://jobs.universityofcalifornia.edu/site/advancedsearch?keywords=&Campus%5Bcampus_id%5D=&multiple_locations=0&search=",
+    "first": false,
+    "emails": [
+     "hr@ucop.edu"
+    ],
+    "items": [
+     {
+      "title": "Administrative Analyst",
+      "loc": "",
+      "ok": "unknown"
+     },
+     {
+      "title": "Share Administrative Analyst by email",
+      "loc": "",
+      "ok": "unknown"
+     },
+     {
+      "title": "Share Administrative Analyst on Social Media",
+      "loc": "",
+      "ok": "unknown"
+     },
+     {
+      "title": "View full Administrative Analyst job description at",
+      "loc": "",
+      "ok": "unknown"
+     }
+    ]
+   },
+   {
+    "company": "cohere",
+    "url": "https://job-boards.greenhouse.io/coherehealth?departments%5B%5D=4091050003",
+    "first": false,
+    "emails": [],
+    "items": [
+     {
+      "title": "Lead DevOps Engineer New",
+      "loc": "United States",
+      "ok": "match"
+     }
+    ]
+   },
+   {
+    "company": "Socket",
+    "url": "https://jobs.ashbyhq.com/socket",
+    "first": true,
+    "emails": [],
+    "items": [
+     {
+      "title": "Forward Deployed Engineer, Python",
+      "loc": "United States",
+      "ok": "match"
+     },
+     {
+      "title": "Sales Engineer, Commercial",
+      "loc": "United States",
+      "ok": "match"
+     },
+     {
+      "title": "Sales Engineer, Enterprise",
+      "loc": "United States",
+      "ok": "match"
+     },
+     {
+      "title": "Sales Engineer, SMB",
+      "loc": "United States",
+      "ok": "match"
+     },
+     {
+      "title": "Senior Platform Engineer",
+      "loc": "Remote",
+      "ok": "unknown"
+     },
+     {
+      "title": "Vulnerability Research Engineer",
+      "loc": "Remote",
+      "ok": "unknown"
+     }
+    ]
+   }
+  ],
+  "errors": [
+   "Rotto: 429 Client Error: Too Many Requests for url: https://www.rotto.com/careers"
+  ]
+ },
+ {
   "checked": "2026-11-13T09:46:09.545015-08:00",
   "findings": [
    {
