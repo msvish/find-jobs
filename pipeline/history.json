@@ -1,5 +1,26 @@
 [
  {
+  "checked": "2026-11-15T09:13:25.421713-08:00",
+  "findings": [
+   {
+    "company": "cohere",
+    "url": "https://job-boards.greenhouse.io/coherehealth?departments%5B%5D=4091050003",
+    "first": false,
+    "emails": [],
+    "items": [
+     {
+      "title": "Lead DevOps Engineer tags.new",
+      "loc": "United States",
+      "ok": "match"
+     }
+    ]
+   }
+  ],
+  "errors": [
+   "Rotto: 429 Client Error: Too Many Requests for url: https://www.rotto.com/careers"
+  ]
+ },
+ {
   "checked": "2026-11-14T08:37:15.470884-08:00",
   "findings": [
    {
