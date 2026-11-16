@@ -1,5 +1,75 @@
 [
  {
+  "checked": "2026-11-16T12:31:02.694358-08:00",
+  "findings": [
+   {
+    "company": "University of Alabama",
+    "url": "https://uab.taleo.net/careersection/ext/jobsearch.ftl",
+    "first": false,
+    "emails": [],
+    "items": [
+     {
+      "title": "COMPENSATION ANALYST",
+      "loc": "",
+      "ok": "unknown"
+     }
+    ]
+   },
+   {
+    "company": "M&T",
+    "url": "https://mtb.wd5.myworkdayjobs.com/en-US/MTB?jobFamily=e8f67fb24d7c10020c42cd74a1470000",
+    "first": false,
+    "emails": [
+     "careersitesupport@mtb.com"
+    ],
+    "items": [
+     {
+      "title": "Lead Software Engineer - Data Engineer",
+      "loc": "Buffalo, NY",
+      "ok": "match"
+     }
+    ]
+   },
+   {
+    "company": "UCLA",
+    "url": "https://jobs.universityofcalifornia.edu/site/advancedsearch?keywords=&Campus%5Bcampus_id%5D=&multiple_locations=0&search=",
+    "first": false,
+    "emails": [
+     "hr@ucop.edu"
+    ],
+    "items": [
+     {
+      "title": "Contracts And Grants Analyst (RSCH ADM 3 RP)",
+      "loc": "",
+      "ok": "unknown"
+     }
+    ]
+   },
+   {
+    "company": "cohere",
+    "url": "https://job-boards.greenhouse.io/coherehealth?departments%5B%5D=4091050003",
+    "first": false,
+    "emails": [],
+    "items": [
+     {
+      "title": "Lead DevOps Engineer New",
+      "loc": "United States",
+      "ok": "match"
+     },
+     {
+      "title": "Lead Healthcare Analyst New",
+      "loc": "United States",
+      "ok": "match"
+     }
+    ]
+   }
+  ],
+  "errors": [
+   "Rotto: 429 Client Error: Too Many Requests for url: https://www.rotto.com/careers",
+   "Clair Health: 403 Client Error: Forbidden for url: https://jobs.gusto.com/boards/clair-health-inc-4e0ff175-30cb-432e-87e7-97b74fdd8b4f"
+  ]
+ },
+ {
   "checked": "2026-11-15T09:13:25.421713-08:00",
   "findings": [
    {
