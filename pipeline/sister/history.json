@@ -1,5 +1,39 @@
 [
  {
+  "checked": "2026-11-19T00:33:23.444385+05:30",
+  "findings": [
+   {
+    "company": "Hp",
+    "url": "https://hp.wd5.myworkdayjobs.com/en-US/ExternalCareerSite/details/Financial-Analyst_3168548-1?primaryLocation=336ea9b27e9910b2190cf5b2b198f6b3",
+    "first": false,
+    "emails": [],
+    "items": [
+     {
+      "title": "Financial Analyst 2",
+      "loc": "Bengaluru, Karnataka, India",
+      "ok": "match"
+     },
+     {
+      "title": "Financial Analyst-Lease Enablement",
+      "loc": "Bengaluru, Karnataka, India",
+      "ok": "match"
+     },
+     {
+      "title": "Financial Analyst-Statutory Audits",
+      "loc": "Bengaluru, Karnataka, India",
+      "ok": "match"
+     },
+     {
+      "title": "Manager-Tax Compliances",
+      "loc": "Bengaluru, Karnataka, India",
+      "ok": "match"
+     }
+    ]
+   }
+  ],
+  "errors": []
+ },
+ {
   "checked": "2026-11-17T02:02:59.891680+05:30",
   "findings": [
    {
