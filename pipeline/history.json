@@ -1,5 +1,131 @@
 [
  {
+  "checked": "2026-11-20T10:38:58.187019-08:00",
+  "findings": [
+   {
+    "company": "University of Alabama",
+    "url": "https://uab.taleo.net/careersection/ext/jobsearch.ftl",
+    "first": false,
+    "emails": [],
+    "items": [
+     {
+      "title": "ENGINEER II",
+      "loc": "",
+      "ok": "unknown"
+     }
+    ]
+   },
+   {
+    "company": "M&T",
+    "url": "https://mtb.wd5.myworkdayjobs.com/en-US/MTB?jobFamily=e8f67fb24d7c10020c42cd74a1470000",
+    "first": false,
+    "emails": [
+     "careersitesupport@mtb.com"
+    ],
+    "items": [
+     {
+      "title": "Lead Software Engineer - .Net/Azure",
+      "loc": "Wilmington, DE",
+      "ok": "match"
+     },
+     {
+      "title": "Lead Software Engineer - Mainframe",
+      "loc": "Buffalo, NY",
+      "ok": "match"
+     },
+     {
+      "title": "Lead Solution Engineer \u2013 Snowflake, Azure",
+      "loc": "Wilmington, DE",
+      "ok": "match"
+     },
+     {
+      "title": "Senior Software Engineer - Oracle Cloud Applications",
+      "loc": "Buffalo, NY",
+      "ok": "match"
+     },
+     {
+      "title": "Senior Software Engineer - Payments Technology (.NET)",
+      "loc": "Wilmington, DE",
+      "ok": "match"
+     },
+     {
+      "title": "Senior Software Engineer - Salesforce, Java",
+      "loc": "Buffalo, NY",
+      "ok": "match"
+     },
+     {
+      "title": "Software Engineer - Liquidity Reporting",
+      "loc": "Buffalo, NY",
+      "ok": "match"
+     },
+     {
+      "title": "Software Engineer - Oracle Cloud Applications",
+      "loc": "Buffalo, NY",
+      "ok": "match"
+     },
+     {
+      "title": "Sr. Software Engineer - .Net Full Stack",
+      "loc": "Buffalo, NY",
+      "ok": "match"
+     }
+    ]
+   },
+   {
+    "company": "University of Rochester",
+    "url": "https://rochester.wd5.myworkdayjobs.com/en-US/UR_Staff?source=LinkedIn",
+    "first": false,
+    "emails": [],
+    "items": [
+     {
+      "title": "Archives Intern",
+      "loc": "",
+      "ok": "unknown"
+     },
+     {
+      "title": "Pharmacy Intern - Inpatient",
+      "loc": "",
+      "ok": "unknown"
+     }
+    ]
+   },
+   {
+    "company": "cohere",
+    "url": "https://job-boards.greenhouse.io/coherehealth?departments%5B%5D=4091050003",
+    "first": false,
+    "emails": [],
+    "items": [
+     {
+      "title": "Lead Healthcare Analyst New",
+      "loc": "United States",
+      "ok": "match"
+     },
+     {
+      "title": "Senior Applied Scientist New",
+      "loc": "United States",
+      "ok": "match"
+     }
+    ]
+   },
+   {
+    "company": "Gradial",
+    "url": "https://job-boards.greenhouse.io/gradial?gh_src=bh1uowf59us",
+    "first": false,
+    "emails": [],
+    "items": [
+     {
+      "title": "Marketing Engineer New",
+      "loc": "Seattle, WA",
+      "ok": "match"
+     }
+    ]
+   }
+  ],
+  "errors": [
+   "Rotto: 429 Client Error: Too Many Requests for url: https://www.rotto.com/careers",
+   "Clair Health: 403 Client Error: Forbidden for url: https://jobs.gusto.com/boards/clair-health-inc-4e0ff175-30cb-432e-87e7-97b74fdd8b4f"
+  ]
+ },
+ {
   "checked": "2026-11-19T11:00:43.996320-08:00",
   "findings": [
    {
