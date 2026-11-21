@@ -1,5 +1,75 @@
 [
  {
+  "checked": "2026-11-21T09:35:58.779015-08:00",
+  "findings": [
+   {
+    "company": "University of Alabama",
+    "url": "https://uab.taleo.net/careersection/ext/jobsearch.ftl",
+    "first": false,
+    "emails": [],
+    "items": [
+     {
+      "title": "COST & SPACE ANALYST",
+      "loc": "",
+      "ok": "unknown"
+     },
+     {
+      "title": "PROJECT MANAGER-FACILITIES ELECTRICAL ENGINEER",
+      "loc": "",
+      "ok": "unknown"
+     }
+    ]
+   },
+   {
+    "company": "M&T",
+    "url": "https://mtb.wd5.myworkdayjobs.com/en-US/MTB?jobFamily=e8f67fb24d7c10020c42cd74a1470000",
+    "first": false,
+    "emails": [
+     "careersitesupport@mtb.com"
+    ],
+    "items": [
+     {
+      "title": "Distinguished AI Engineer",
+      "loc": "Buffalo, NY",
+      "ok": "match"
+     },
+     {
+      "title": "Distinguished Engineer - Consumer Technology",
+      "loc": "Buffalo, NY",
+      "ok": "match"
+     },
+     {
+      "title": "Principal Software Engineer - Mortgage Technology",
+      "loc": "Buffalo, NY",
+      "ok": "match"
+     },
+     {
+      "title": "Software Engineer - .Net / API",
+      "loc": "Philadelphia, PA",
+      "ok": "match"
+     }
+    ]
+   },
+   {
+    "company": "cohere",
+    "url": "https://job-boards.greenhouse.io/coherehealth?departments%5B%5D=4091050003",
+    "first": false,
+    "emails": [],
+    "items": [
+     {
+      "title": "Integration Support Analyst New",
+      "loc": "Remote; United States",
+      "ok": "match"
+     }
+    ]
+   }
+  ],
+  "errors": [
+   "Rotto: 429 Client Error: Too Many Requests for url: https://www.rotto.com/careers",
+   "Clair Health: 403 Client Error: Forbidden for url: https://jobs.gusto.com/boards/clair-health-inc-4e0ff175-30cb-432e-87e7-97b74fdd8b4f"
+  ]
+ },
+ {
   "checked": "2026-11-20T10:38:58.187019-08:00",
   "findings": [
    {
