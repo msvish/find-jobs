@@ -64,6 +64,30 @@ jobs:
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
           NOTIFY_TO: ${{ secrets.NOTIFY_TO }}
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+          # ── Target domains: SWE / Data Eng / AI / Platform / Distributed Systems ──
+          # ROLE_WORDS replaces the default broad regex; each comma-separated piece is a regex alternation.
+          ROLE_WORDS: >-
+            software engineer,data engineer,ml engineer,machine learning engineer,
+            ai engineer,platform engineer,infrastructure engineer,
+            site reliability engineer,sre,backend engineer,frontend engineer,
+            full.stack engineer,distributed systems,mlops engineer,
+            analytics engineer,applied scientist,research engineer,
+            engineering manager,staff engineer,principal engineer,
+            cloud engineer,devops engineer,data scientist,systems engineer,
+            software developer,founding engineer,ai researcher
+          # JOB_WORDS adds tech buzzwords on top of ROLE_WORDS (title must still match one of the above).
+          JOB_WORDS: llm,genai,rag,spark,kafka,flink,kubernetes,airflow,dbt,pytorch
+          # EXCLUDE_TITLES: drop any title containing one of these words (comma-separated regex pieces).
+          # Non-tech noise + roles clearly requiring 7+ YoE (staff, principal, director, VP, fellow).
+          EXCLUDE_TITLES: >-
+            maintenance,janitor,custodian,nurs,chef,driver,accountant,
+            paralegal,attorney,physician,surgeon,radiologist,dentist,pharmacist,
+            financial analyst,tax analyst,sales representative,realtor,
+            hvac,electrician,plumber,security guard,warehouse,
+            staff engineer,principal engineer,distinguished engineer,
+            fellow engineer,director of engineering,director of,
+            vp of,vp ,head of,senior staff,senior principal,
+            engineering director,chief architect
         run: python careers_watch.py
 
       - name: Run watcher (sister, India)

@@ -162,6 +162,35 @@ h1 {
   font-weight:600;
 }
 
+.badge {
+  display:inline-block;
+  font-size:11px;
+  font-weight:700;
+  padding:1px 7px;
+  border-radius:999px;
+  margin-left:8px;
+  vertical-align:middle;
+  letter-spacing:.02em;
+  white-space:nowrap;
+}
+
+.badge.hot {
+  background:#FFF3E0;
+  color:#E65100;
+  border:1px solid #FFCC80;
+}
+
+.badge.strong {
+  background:#F3F0FF;
+  color:#5B21B6;
+  border:1px solid #C4B5FD;
+}
+
+@media (prefers-color-scheme:dark) {
+  .badge.hot    { background:#3A1F00; color:#FFB74D; border-color:#7A4000; }
+  .badge.strong { background:#1E1535; color:#A78BFA; border-color:#4C3080; }
+}
+
 .roles .loc {
   font-size:13px;
   color:var(--muted);

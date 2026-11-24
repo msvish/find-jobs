@@ -14,7 +14,7 @@ from html import escape
 from pathlib import Path
 
 CSS_FILE = Path(__file__).resolve().parent / "report.css"
-DAYS_SHOWN = 2  # new roles older than this drop off the page (they stay in history.json)
+DAYS_SHOWN = 2 # new roles older than this drop off the page (they stay in history.json)
 
 JS = """
 const q=document.getElementById('q');
@@ -41,7 +41,22 @@ def _group(history, since):
                 if i["title"] not in co["seen"]:
                     co["seen"].add(i["title"])
                     co["roles"].append({**i, "found": found})
-    return sorted(companies.values(), key=lambda c: c["latest"], reverse=True)
+    # Within each company: best score first
+    for co in companies.values():
+        co["roles"].sort(key=lambda r: (-r.get("score", 0), r["title"]))
+    # Sort: companies with the highest-scored role first; ties by recency
+    return sorted(companies.values(),
+                  key=lambda c: (max((r.get("score", 0) for r in c["roles"]), default=0), c["latest"]),
+                  reverse=True)
+
+
+def _score_badge(score: int) -> str:
+    """Visual badge based on relevance score (higher = better match for target domains)."""
+    if score >= 5:
+        return '<span class="badge hot" title="Strong match"> Top pick</span>'
+    if score >= 3:
+        return '<span class="badge strong" title="Good match"> Strong</span>'
+    return ""
 
 
 def _role(r):
@@ -51,7 +66,9 @@ def _role(r):
         where = '<span class="loc unk">Location not listed</span>'
     else:  # older entries saved before locations were captured
         where = ""
-    return (f'<li><div class="role"><span class="title">{escape(r["title"])}</span>{where}</div>'
+    badge = _score_badge(r.get("score", 0))
+    return (f'<li><div class="role"><span class="title">{escape(r["title"])}</span>'
+            f'{badge}{where}</div>'
             f'<time datetime="{r["found"].isoformat()}">{r["found"]:%b %-d}</time></li>')
 
 

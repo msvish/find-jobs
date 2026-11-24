@@ -19,7 +19,7 @@ Notifications (optional, via environment variables):
 Every run rewrites new.html (all findings, newest first) from history.json.
 """
 import csv, io, json, os, re, smtplib
-from datetime import datetime
+from datetime import datetime, timedelta
 from zoneinfo import ZoneInfo
 from email.mime.text import MIMEText
 from pathlib import Path
@@ -53,7 +53,7 @@ STATE = DATA / "state.json"
 HISTORY = DATA / "history.json"
 PAGE = DATA / "new.html"
 TZ = ZoneInfo(os.getenv("TIMEZONE", "").strip() or "America/Los_Angeles")
-MAX_RUNS = 200  # runs kept in history.json
+HISTORY_DAYS = 7  # purge runs older than this from history.json to keep storage lean
 
 HEADERS = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
            "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126 Safari/537.36"}
@@ -69,7 +69,42 @@ JOB_WORDS = re.compile(r"(?<![A-Za-z])(" + "|".join(_extra("ROLE_WORDS") or [_DE
 _rk = [k.strip() for k in os.getenv("ROLE_KEYWORDS", "").split(",") if k.strip()]
 ROLE_KEYWORDS = re.compile(r"(?<![A-Za-z])(?:" + "|".join(re.escape(k).replace(r"\ ", r"\s+") for k in _rk) + r")(?![A-Za-z])",
                            re.I) if _rk else None
+
+# EXCLUDE_TITLES: comma-separated words/phrases; titles matching any are silently dropped.
+# Set via env var, e.g. EXCLUDE_TITLES="maintenance,nursing,janitor,chef"
+_excl = [w.strip() for w in os.getenv("EXCLUDE_TITLES", "").split(",") if w.strip()]
+EXCLUDE_TITLES = re.compile(
+    r"(?<![A-Za-z])(?:" + "|".join(re.escape(w) for w in _excl) + r")(?![A-Za-z])", re.I
+) if _excl else None
+
 NOISE = re.compile(r"(cookie|privacy|terms of|copyright|©|subscribe|newsletter|log ?in|sign ?up)", re.I)
+
+# ── Relevance scoring (0-5 YoE target) ──────────────────────────────────────
+# Entry/junior roles surface first; senior is kept but not boosted; staff+ is excluded upstream.
+_SCORE_ENTRY   = re.compile(r"\b(?:junior|jr\.?|associate|new\s+grad(?:uate)?|entry[\s-]?level|"
+                             r"early\s+career|university\s+grad(?:uate)?|apprentice|trainee|"
+                             r"engineer\s+i\b|analyst\s+i\b|intern(?:ship)?)\b", re.I)
+_SCORE_MID     = re.compile(r"\b(?:engineer\s+ii\b|analyst\s+ii\b|mid[\s-]?level|intermediate)\b", re.I)
+_SCORE_AI      = re.compile(r"\b(?:ai|ml|llm|gen.?ai|machine learning|deep learning|rag|mlops|"
+                             r"foundation model|diffusion|transformer|nlp|computer vision|cv|"
+                             r"applied scientist|research engineer|ai researcher)\b", re.I)
+_SCORE_DATA    = re.compile(r"\b(?:data engineer|analytics engineer|data platform|data infrastructure|"
+                             r"etl|elt|dbt|spark|kafka|flink|airflow|pipeline)\b", re.I)
+_SCORE_PLATFORM = re.compile(r"\b(?:platform|distributed|infrastructure|reliability|kubernetes|k8s|"
+                              r"cloud|devops|sre|systems engineer)\b", re.I)
+
+
+def relevance_score(title: str, loc_status: str) -> int:
+    """Higher = better match.  Entry-level signals float first; senior kept but unranked."""
+    score = 0
+    if _SCORE_ENTRY.search(title):    score += 3   # junior / new grad / intern → top of list
+    elif _SCORE_MID.search(title):    score += 1   # engineer II / mid-level
+    # senior/lead = 0 bonus: visible but doesn't outrank entry/mid
+    if _SCORE_AI.search(title):       score += 2
+    if _SCORE_DATA.search(title):     score += 2
+    if _SCORE_PLATFORM.search(title): score += 1
+    if loc_status == "match":         score += 1
+    return score
 EMAIL = re.compile(r"[\w.+-]+@[\w-]+\.[a-z]{2,}(?:\.[a-z]{2,})?", re.I)
 
 
@@ -299,6 +334,9 @@ def main():
         cands = sorted(t for t in items if t not in old and looks_like_title(t) and is_role(t))
         if row["keywords"]:
             cands = [t for t in cands if any(k in t.lower() for k in row["keywords"])]
+        # Drop titles that match any EXCLUDE_TITLES pattern (non-tech roles slipping through)
+        if EXCLUDE_TITLES:
+            cands = [t for t in cands if not EXCLUDE_TITLES.search(t)]
         cands = drop_merged(cands, items, ctx)
         roles = []
         for t in cands:
@@ -311,7 +349,10 @@ def main():
                 status = "match"
             if REGION != "ALL" and status == "foreign":
                 continue  # wrong country: still in state.json, so it never comes back as "new" later
-            roles.append({"title": t, "loc": guess_location(ctx.get(t, ""), t), "ok": status})
+            score = relevance_score(t, status)
+            roles.append({"title": t, "loc": guess_location(ctx.get(t, ""), t), "ok": status, "score": score})
+        # Best matches first; ties broken alphabetically for stable output
+        roles.sort(key=lambda r: (-r["score"], r["title"]))
         if roles:
             findings.append({"company": name, "url": url, "first": prev is None, "emails": emails,
                              "items": roles[:25]})
@@ -320,7 +361,8 @@ def main():
     STATE.write_text(json.dumps(state, indent=1))
     if findings or errors:
         history.insert(0, {"checked": now.isoformat(), "findings": findings, "errors": errors})
-        history = history[:MAX_RUNS]
+        cutoff = now - timedelta(days=HISTORY_DAYS)
+        history = [h for h in history if datetime.fromisoformat(h["checked"]) >= cutoff]
         HISTORY.write_text(json.dumps(history, indent=1))
     # always re-render so "Last checked" stays current
     PAGE.write_text(render(history, len(rows), now, errors=errors), encoding="utf-8")
