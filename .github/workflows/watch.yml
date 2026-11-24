@@ -3,7 +3,6 @@ name: Career page watch
 on:
   schedule:
     # GitHub cron is UTC only. 10:17 UTC = 2:17am PST (winter, standard time) / 3:17am PDT (summer)
-    # = 3:47pm IST for the sister profile (India has no daylight saving).
     # Off the top of the hour on purpose: :00 is when GitHub's scheduler is busiest and runs start latest.
     - cron: "17 10 * * *"
   workflow_dispatch: # "Run workflow" button in the Actions tab
@@ -22,8 +21,6 @@ jobs:
   watch:
     runs-on: ubuntu-24.04
     timeout-minutes: 30
-    env:
-      HAS_SISTER: ${{ secrets.SISTER_SHEET_ID != '' }}
     outputs:
       dir: ${{ steps.loc.outputs.dir }}
     steps:
@@ -90,34 +87,12 @@ jobs:
             engineering director,chief architect
         run: python careers_watch.py
 
-      - name: Run watcher (sister, India)
-        if: env.HAS_SISTER == 'true' # skipped until the SISTER_SHEET_ID secret exists
-        continue-on-error: true
-        working-directory: ${{ steps.loc.outputs.dir }}
-        env:
-          SHEET_ID: ${{ secrets.SISTER_SHEET_ID }}
-          SHEET_GID: ${{ vars.SISTER_SHEET_GID }}
-          DATA_DIR: sister # her state.json, history.json, new.html live in <script folder>/sister/
-          REGION: IN
-          PLACES: Bengaluru,Bangalore,Karnataka # only these; other Indian cities are dropped
-          TIMEZONE: Asia/Kolkata
-          # Only titles containing one of these show up on her page (case-insensitive, whole words).
-          ROLE_KEYWORDS: >-
-            financial analyst,finance analyst,FP&A,FPNA,financial planning,performance management,
-            EPM,CPM,business finance,tax analyst,tax,indirect tax,direct tax,GST,VAT,transfer pricing
-          GMAIL_USER: ${{ secrets.GMAIL_USER }}
-          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
-          NOTIFY_TO: ${{ secrets.SISTER_NOTIFY_TO }} # her email; no email is sent if this is unset
-        run: |
-          if [ -z "$NOTIFY_TO" ]; then unset GMAIL_USER GMAIL_APP_PASSWORD; fi
-          python careers_watch.py
-
       - name: Commit results
         working-directory: ${{ steps.loc.outputs.dir }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          for f in state.json history.json new.html sister/state.json sister/history.json sister/new.html; do
+          for f in state.json history.json new.html; do
             if [ -f "$f" ]; then git add "$f"; fi
           done
           if git diff --cached --quiet; then
@@ -147,11 +122,6 @@ jobs:
           mkdir site
           cp "${{ needs.watch.outputs.dir }}/new.html" site/index.html
           cp "${{ needs.watch.outputs.dir }}/report.css" site/report.css
-          if [ -f "${{ needs.watch.outputs.dir }}/sister/new.html" ]; then
-            mkdir site/sister
-            cp "${{ needs.watch.outputs.dir }}/sister/new.html" site/sister/index.html
-            cp "${{ needs.watch.outputs.dir }}/report.css" site/sister/report.css
-          fi
 
       - uses: actions/configure-pages@v6
 
