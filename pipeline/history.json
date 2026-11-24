@@ -1,5 +1,13 @@
 [
  {
+  "checked": "2026-11-24T10:15:59.696361-08:00",
+  "findings": [],
+  "errors": [
+   "Rotto: 429 Client Error: Too Many Requests for url: https://www.rotto.com/careers",
+   "Clair Health: 403 Client Error: Forbidden for url: https://jobs.gusto.com/boards/clair-health-inc-4e0ff175-30cb-432e-87e7-97b74fdd8b4f"
+  ]
+ },
+ {
   "checked": "2026-11-24T10:00:36.044178-08:00",
   "findings": [
    {
