@@ -1,5 +1,76 @@
 [
  {
+  "checked": "2026-11-25T11:58:00.461064-08:00",
+  "findings": [
+   {
+    "company": "University of Alabama",
+    "url": "https://uab.taleo.net/careersection/ext/jobsearch.ftl",
+    "first": false,
+    "emails": [],
+    "items": [
+     {
+      "title": "DATA SCIENTIST ASSOCIATE",
+      "loc": "",
+      "ok": "unknown",
+      "score": 3
+     }
+    ]
+   },
+   {
+    "company": "Gradial",
+    "url": "https://job-boards.greenhouse.io/gradial?gh_src=bh1uowf59us",
+    "first": false,
+    "emails": [],
+    "items": [
+     {
+      "title": "Staff Software Engineer, Web & Email Infrastructure New",
+      "loc": "Seattle, WA",
+      "ok": "match",
+      "score": 2
+     }
+    ]
+   },
+   {
+    "company": "Hero",
+    "url": "https://www.herosafety.com/about",
+    "first": true,
+    "emails": [
+     "jobs@herosafety.com"
+    ],
+    "items": [
+     {
+      "title": "Apply for Senior Software Engineer - Applied AI",
+      "loc": "",
+      "ok": "unknown",
+      "score": 2
+     },
+     {
+      "title": "Apply for Software Engineer - Computer Vision",
+      "loc": "",
+      "ok": "unknown",
+      "score": 2
+     },
+     {
+      "title": "Senior Software Engineer - Applied AI",
+      "loc": "",
+      "ok": "unknown",
+      "score": 2
+     },
+     {
+      "title": "Software Engineer - Computer Vision",
+      "loc": "",
+      "ok": "unknown",
+      "score": 2
+     }
+    ]
+   }
+  ],
+  "errors": [
+   "Rotto: 429 Client Error: Too Many Requests for url: https://www.rotto.com/careers",
+   "Clair Health: 403 Client Error: Forbidden for url: https://jobs.gusto.com/boards/clair-health-inc-4e0ff175-30cb-432e-87e7-97b74fdd8b4f"
+  ]
+ },
+ {
   "checked": "2026-11-24T12:41:25.922345-08:00",
   "findings": [
    {
@@ -507,200 +578,6 @@
     "items": [
      {
       "title": "Marketing Engineer tags.new",
-      "loc": "Seattle, WA",
-      "ok": "match"
-     }
-    ]
-   }
-  ],
-  "errors": [
-   "Rotto: 429 Client Error: Too Many Requests for url: https://www.rotto.com/careers",
-   "Clair Health: 403 Client Error: Forbidden for url: https://jobs.gusto.com/boards/clair-health-inc-4e0ff175-30cb-432e-87e7-97b74fdd8b4f"
-  ]
- },
- {
-  "checked": "2026-11-18T11:01:27.744257-08:00",
-  "findings": [
-   {
-    "company": "University of Alabama",
-    "url": "https://uab.taleo.net/careersection/ext/jobsearch.ftl",
-    "first": false,
-    "emails": [],
-    "items": [
-     {
-      "title": "COMPUTATIONAL BIOLOGIST SCIENTIST",
-      "loc": "",
-      "ok": "unknown"
-     },
-     {
-      "title": "DATA ANALYST",
-      "loc": "",
-      "ok": "unknown"
-     },
-     {
-      "title": "DATA SCIENTIST ASSISTANT",
-      "loc": "",
-      "ok": "unknown"
-     }
-    ]
-   },
-   {
-    "company": "M&T",
-    "url": "https://mtb.wd5.myworkdayjobs.com/en-US/MTB?jobFamily=e8f67fb24d7c10020c42cd74a1470000",
-    "first": false,
-    "emails": [
-     "careersitesupport@mtb.com"
-    ],
-    "items": [
-     {
-      "title": "Senior Software Engineer - Salesforce, Java",
-      "loc": "Buffalo, NY",
-      "ok": "match"
-     },
-     {
-      "title": "Software Engineer - Liquidity Reporting",
-      "loc": "Buffalo, NY",
-      "ok": "match"
-     }
-    ]
-   },
-   {
-    "company": "UCLA",
-    "url": "https://jobs.universityofcalifornia.edu/site/advancedsearch?keywords=&Campus%5Bcampus_id%5D=&multiple_locations=0&search=",
-    "first": false,
-    "emails": [
-     "hr@ucop.edu"
-    ],
-    "items": [
-     {
-      "title": "Academic HR Analyst 1",
-      "loc": "",
-      "ok": "unknown"
-     },
-     {
-      "title": "Academic HR Analyst 2",
-      "loc": "",
-      "ok": "unknown"
-     },
-     {
-      "title": "Academic HR Analyst 3",
-      "loc": "",
-      "ok": "unknown"
-     },
-     {
-      "title": "Academic HR Analyst and Team Lead",
-      "loc": "",
-      "ok": "unknown"
-     },
-     {
-      "title": "Share Academic HR Analyst 1 by email",
-      "loc": "",
-      "ok": "unknown"
-     },
-     {
-      "title": "Share Academic HR Analyst 1 on Social Media",
-      "loc": "",
-      "ok": "unknown"
-     },
-     {
-      "title": "Share Academic HR Analyst 2 by email",
-      "loc": "",
-      "ok": "unknown"
-     },
-     {
-      "title": "Share Academic HR Analyst 2 on Social Media",
-      "loc": "",
-      "ok": "unknown"
-     },
-     {
-      "title": "Share Academic HR Analyst 3 by email",
-      "loc": "",
-      "ok": "unknown"
-     },
-     {
-      "title": "Share Academic HR Analyst 3 on Social Media",
-      "loc": "",
-      "ok": "unknown"
-     }
-    ]
-   },
-   {
-    "company": "Move Works",
-    "url": "https://www.moveworks.com/us/en/company/careers#open-roles",
-    "first": false,
-    "emails": [],
-    "items": [
-     {
-      "title": "Senior Software Engineer, Developer Experience - Moveworks",
-      "loc": "Mountain view, California, United states, Full-time",
-      "ok": "match"
-     },
-     {
-      "title": "Software Engineer, Agentic Systems - Moveworks",
-      "loc": "Mountain view, California, United states, Full-time",
-      "ok": "match"
-     }
-    ]
-   },
-   {
-    "company": "Litera",
-    "url": "https://litera.wd12.myworkdayjobs.com/en-US/Litera_Careers",
-    "first": false,
-    "emails": [],
-    "items": [
-     {
-      "title": "Associate AI Platform Engineer",
-      "loc": "Denver, CO",
-      "ok": "match"
-     }
-    ]
-   },
-   {
-    "company": "cohere",
-    "url": "https://job-boards.greenhouse.io/coherehealth?departments%5B%5D=4091050003",
-    "first": false,
-    "emails": [],
-    "items": [
-     {
-      "title": "Sr. Software Engineer, Data Platform",
-      "loc": "United States",
-      "ok": "match"
-     }
-    ]
-   },
-   {
-    "company": "Abaka",
-    "url": "https://www.abaka.ai/careers",
-    "first": false,
-    "emails": [
-     "business@abaka.ai"
-    ],
-    "items": [
-     {
-      "title": "Data Acquisition Engineer Business Development Palo Alto, CA",
-      "loc": "Palo Alto, CA",
-      "ok": "match"
-     },
-     {
-      "title": "Data Engineer Engineering Palo Alto, CA",
-      "loc": "Palo Alto, CA",
-      "ok": "match"
-     },
-     {
-      "title": "Machine Learning Engineer Engineering Palo Alto, CA",
-      "loc": "Palo Alto, CA",
-      "ok": "match"
-     }
-    ]
-   },
-   {
-    "company": "Gradial",
-    "url": "https://job-boards.greenhouse.io/gradial?gh_src=bh1uowf59us",
-    "first": false,
-    "emails": [],
-    "items": [
-     {
-      "title": "Marketing Engineer New",
       "loc": "Seattle, WA",
       "ok": "match"
      }
