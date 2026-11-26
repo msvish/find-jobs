@@ -15,17 +15,19 @@
    "Strategic Account Manager",
    "Technical Support Engineer"
   ],
-  "checked": "2026-11-25T11:58:00.461064-08:00"
+  "checked": "2026-11-26T11:38:57.811792-08:00"
  },
  "https://uab.taleo.net/careersection/ext/jobsearch.ftl": {
   "company": "University of Alabama",
   "items": [
    "112000000 Office of Chief Facilities Officer (32)",
-   "114402000 Temporary Services (34)",
-   "310000000 School of Medicine Dean's Office (136)",
+   "114402000 Temporary Services (33)",
+   "310000000 School of Medicine Dean's Office (134)",
    "340000000 School of Nursing Dean's Office (16)",
    "992001001 Cooper Green Mercy (17)",
    "ACADEMIC ADVISOR II",
+   "ADMINISTRATIVE ASSOCIATE",
+   "ADVANCED ANALYTICS ENGINEER",
    "Access My Saved Searches",
    "Access my profile",
    "Add Job Field",
@@ -44,17 +46,16 @@
    "CLINICAL RESEARCH DATA COORDINATOR I",
    "CLINICAL RESEARCH DATA COORDINATOR II",
    "CLINICAL RESEARCH NURSE COORDINATOR II",
-   "CLINICAL RESEARCH RECRUITER (PART-TIME)",
    "CLINICAL RESEARCH REGULATORY COORDINATOR II (2)",
-   "COST & SPACE ANALYST",
    "Cancel",
    "Clear",
-   "Clerical & Administrative (77)",
-   "Clinical Research (43)",
+   "Clerical & Administrative (79)",
+   "Clinical Research (42)",
    "Confirm",
    "Current University Employee Opportunities",
    "DATA SCIENTIST ASSOCIATE",
    "DENTAL ASSISTANT LEAD",
+   "DENTAL CLINIC COORDINATOR",
    "DIRECTOR-CLINICAL RESEARCH ADMINISTRATION",
    "ENVIRONMENTAL SERVICES SPECIALIST-CAMPUS (3)",
    "Facilities (26)",
@@ -65,28 +66,26 @@
    "Huntsville Regional Medical Campus (7)",
    "Job Field",
    "Job Openings",
-   "Job Openings 1 - 25 of 339",
+   "Job Openings 1 - 25 of 337",
    "Job Search",
    "Location",
-   "MAJOR SYSTEMS SUPERVISOR-CHILLED WATER MAINTENANCE",
    "Montgomery Regional Medical Campus",
    "Montgomery Regional Medical Campus (1)",
    "Multi-line",
    "My Jobpage",
    "Next",
    "No jobs correspond to the specified criteria.",
-   "Nov 20, 2026",
    "Nov 23, 2026",
    "Nov 24, 2026",
    "Nov 25, 2026",
    "Nurse Practitioner or Physician Assistant - Internal Medicine",
    "Organization",
+   "PATIENT ACCOUNTS COORDINATOR",
    "PROGRAM ADMINISTRATOR II",
    "Posting Date",
    "Previous",
-   "Professional & Managerial (86)",
+   "Professional & Managerial (85)",
    "RN-Clinic (Temp)",
-   "SCIENTIST IV",
    "Save Job",
    "Save Job Save Job",
    "Save this Search",
@@ -99,13 +98,13 @@
    "Sign In",
    "Skip to main content",
    "Temporary Services",
-   "Temporary Services (38)",
+   "Temporary Services (37)",
    "The search name exceeds the maximum length allowed (200).",
    "To improve your search results, remove one or more filters.",
    "UAB Medicine Careers",
-   "UAB Temporary Services (38)",
+   "UAB Temporary Services (37)",
    "University",
-   "University (275)",
+   "University (274)",
    "University Careers",
    "View All Jobs",
    "Welcome. You are not signed in.",
@@ -113,7 +112,7 @@
    "You can also view all available job openings.",
    "You must specify a search query name."
   ],
-  "checked": "2026-11-25T11:58:00.461064-08:00"
+  "checked": "2026-11-26T11:38:57.811792-08:00"
  },
  "https://secureframe.com/careers?utm_source=6P1Xe3GBV4#jobs": {
   "company": "Secureframe",
@@ -133,7 +132,7 @@
    "Software Engineer, New Grad Engineering \u00b7 Full-time \u00b7 New York, NY View position (opens in new tab)",
    "Staff Software Engineer Engineering \u00b7 Full-time \u00b7 New York, NY View position (opens in new tab)"
   ],
-  "checked": "2026-11-25T11:58:00.461064-08:00"
+  "checked": "2026-11-26T11:38:57.811792-08:00"
  },
  "https://explore.msujobs.msstate.edu/jobs/search": {
   "company": "mmstate",
@@ -496,7 +495,7 @@
    "Warren County (1 items)",
    "We're Hiring!"
   ],
-  "checked": "2026-11-25T11:58:00.461064-08:00"
+  "checked": "2026-11-26T11:38:57.811792-08:00"
  },
  "https://job-boards.greenhouse.io/misfitsmarket?departments%5B%5D=4020779003": {
   "company": "Misfits Market",
@@ -508,7 +507,7 @@
    "There are no jobs that fit these filter criteria",
    "website"
   ],
-  "checked": "2026-11-25T11:58:00.461064-08:00"
+  "checked": "2026-11-26T11:38:57.811792-08:00"
  },
  "https://jobs.ashbyhq.com/Cheiron": {
   "company": "Cheiron",
@@ -545,7 +544,7 @@
    "Manager / Senior Manager, Global Regulatory Affairs, Lifecycle Management (Los Altos) Life Science \u2022 Los Altos \u2022 Full time \u2022 On-site",
    "Manager / Senior Manager, Global Regulatory Affairs, Lifecycle Management (Seoul)",
    "Manager / Senior Manager, Global Regulatory Affairs, Lifecycle Management (Seoul) Life Science \u2022 Seoul \u2022 Full time \u2022 On-site",
-   "Open Positions (14)",
+   "Open Positions (16)",
    "Others",
    "Others \u2022 Los Altos \u2022 Intern \u2022 On-site",
    "Product",
@@ -557,14 +556,18 @@
    "Product \u2022 Los Altos \u2022 Intern \u2022 On-site",
    "Product \u2022 Seoul \u2022 Full time \u2022 On-site",
    "Technical Product Management Intern (Los Altos)",
-   "Technical Product Management Intern (Los Altos) Product \u2022 Los Altos \u2022 Intern \u2022 On-site"
+   "Technical Product Management Intern (Los Altos) Product \u2022 Los Altos \u2022 Intern \u2022 On-site",
+   "\ubc31\uc5d4\ub4dc \uc5d4\uc9c0\ub2c8\uc5b4, Applied Agents (\uc11c\uc6b8)",
+   "\ubc31\uc5d4\ub4dc \uc5d4\uc9c0\ub2c8\uc5b4, Applied Agents (\uc11c\uc6b8) Engineering \u2022 Seoul \u2022 Full time \u2022 On-site",
+   "\ud504\ub85c\ub355\ud2b8 \ub514\uc790\uc774\ub108 (\uc11c\uc6b8)",
+   "\ud504\ub85c\ub355\ud2b8 \ub514\uc790\uc774\ub108 (\uc11c\uc6b8) Product \u2022 Seoul \u2022 Full time \u2022 On-site"
   ],
-  "checked": "2026-11-25T11:58:00.461064-08:00"
+  "checked": "2026-11-26T11:38:57.811792-08:00"
  },
  "https://www.iru.com/company/careers#open-roles": {
   "company": "Iru",
   "items": [],
-  "checked": "2026-11-25T11:58:00.461064-08:00"
+  "checked": "2026-11-26T11:38:57.811792-08:00"
  },
  "https://dotlogics.com/careers": {
   "company": "Dotlogics",
@@ -590,7 +593,7 @@
    "You collaborate with senior creatives, engineers, and strategists who share context, challenge your thinking, and help you grow through real projects.",
    "You will work on real business challenges, not throwaway tasks, helping teams grow and fix what is broken, allowing you to see the direct impact of your work."
   ],
-  "checked": "2026-11-25T11:58:00.461064-08:00"
+  "checked": "2026-11-26T11:38:57.811792-08:00"
  },
  "https://jobs.ashbyhq.com/kepler-ai?departmentId=0794cbb8-7fca-48dc-b655-feb8cb73cf13": {
   "company": "Kepler",
@@ -614,7 +617,7 @@
    "Machine Learning Engineer Engineering \u2022 New York City \u2022 Full time \u2022 On-site $200K \u2013 $280K \u2022 Offers Equity",
    "Open Positions (5)"
   ],
-  "checked": "2026-11-25T11:58:00.461064-08:00"
+  "checked": "2026-11-26T11:38:57.811792-08:00"
  },
  "https://mtb.wd5.myworkdayjobs.com/en-US/MTB?jobFamily=e8f67fb24d7c10020c42cd74a1470000": {
   "company": "M&T",
@@ -624,27 +627,27 @@
    "About Us",
    "Clear All (1)",
    "Distinguished AI Engineer",
-   "Distinguished AI Engineer locations Buffalo, NY posted on Posted 5 Days Ago R91876",
+   "Distinguished AI Engineer locations Buffalo, NY posted on Posted 6 Days Ago R91876",
    "Distinguished Engineer - Consumer Technology",
-   "Distinguished Engineer - Consumer Technology locations Buffalo, NY posted on Posted 5 Days Ago R91877",
+   "Distinguished Engineer - Consumer Technology locations Buffalo, NY posted on Posted 6 Days Ago R91877",
    "Follow Us",
    "Full Stack Software Engineer - Financial Crimes",
-   "Full Stack Software Engineer - Financial Crimes locations Buffalo, NY posted on Posted 6 Days Ago R91281",
+   "Full Stack Software Engineer - Financial Crimes locations Buffalo, NY posted on Posted 7 Days Ago R91281",
    "Lead Forward Deployed Engineer - Agentic Engineering",
-   "Lead Forward Deployed Engineer - Agentic Engineering locations Remote, USA posted on Posted 5 Days Ago R91690",
+   "Lead Forward Deployed Engineer - Agentic Engineering locations Remote, USA posted on Posted 6 Days Ago R91690",
    "Lead SRE Engineer",
-   "Lead SRE Engineer locations Wilmington, DE posted on Posted 6 Days Ago R92130",
+   "Lead SRE Engineer locations Wilmington, DE posted on Posted 7 Days Ago R92130",
    "Lead Software Engineer - .Net/Azure",
-   "Lead Software Engineer - .Net/Azure locations Wilmington, DE posted on Posted 5 Days Ago R90791",
+   "Lead Software Engineer - .Net/Azure locations Wilmington, DE posted on Posted 6 Days Ago R90791",
    "Lead Software Engineer - Mainframe",
-   "Lead Software Engineer - Mainframe locations Buffalo, NY posted on Posted Yesterday R87714",
+   "Lead Software Engineer - Mainframe locations Buffalo, NY posted on Posted 2 Days Ago R87714",
    "Lead Solution Engineer \u2013 Snowflake, Azure",
-   "Lead Solution Engineer \u2013 Snowflake, Azure locations Wilmington, DE posted on Posted 5 Days Ago R91835",
+   "Lead Solution Engineer \u2013 Snowflake, Azure locations Wilmington, DE posted on Posted 6 Days Ago R91835",
    "M&T\u2019s Human Capital Report",
    "Principal Software Engineer - Account Opening",
-   "Principal Software Engineer - Account Opening locations Buffalo, NY posted on Posted 7 Days Ago R91688",
+   "Principal Software Engineer - Account Opening locations Buffalo, NY posted on Posted 8 Days Ago R91688",
    "Principal Software Engineer - Mortgage Technology",
-   "Principal Software Engineer - Mortgage Technology locations Buffalo, NY posted on Posted 5 Days Ago R90790",
+   "Principal Software Engineer - Mortgage Technology locations Buffalo, NY posted on Posted 6 Days Ago R90790",
    "R87714",
    "R88163",
    "R89766",
@@ -667,31 +670,31 @@
    "R92170",
    "Ready to join our team? Submit your application today!",
    "Senior Full Stack Software Engineer \u2013 AI & Angular",
-   "Senior Full Stack Software Engineer \u2013 AI & Angular locations Buffalo, NY posted on Posted 7 Days Ago R90572",
+   "Senior Full Stack Software Engineer \u2013 AI & Angular locations Buffalo, NY posted on Posted 8 Days Ago R90572",
    "Senior Software Engineer - Oracle Cloud Applications",
-   "Senior Software Engineer - Oracle Cloud Applications locations Buffalo, NY posted on Posted 5 Days Ago R90958",
+   "Senior Software Engineer - Oracle Cloud Applications locations Buffalo, NY posted on Posted 6 Days Ago R90958",
    "Senior Software Engineer - Payments Technology (.NET)",
-   "Senior Software Engineer - Payments Technology (.NET) locations Wilmington, DE posted on Posted 6 Days Ago R92170",
+   "Senior Software Engineer - Payments Technology (.NET) locations Wilmington, DE posted on Posted 7 Days Ago R92170",
    "Senior Software Engineer - Salesforce, Java",
-   "Senior Software Engineer - Salesforce, Java locations Buffalo, NY posted on Posted 5 Days Ago R90800",
+   "Senior Software Engineer - Salesforce, Java locations Buffalo, NY posted on Posted 6 Days Ago R90800",
    "Senior Software Engineer \u2013 Mainframe COBOL, z/OS, CICS, JCL",
-   "Senior Software Engineer \u2013 Mainframe COBOL, z/OS, CICS, JCL locations Buffalo, NY posted on Posted 5 Days Ago R90713",
+   "Senior Software Engineer \u2013 Mainframe COBOL, z/OS, CICS, JCL locations Buffalo, NY posted on Posted 6 Days Ago R90713",
    "Senior/Lead Forward Deployed AI Engineer \u2013 Genesys Cloud",
-   "Senior/Lead Forward Deployed AI Engineer \u2013 Genesys Cloud locations Buffalo, NY posted on Posted 5 Days Ago R91498",
+   "Senior/Lead Forward Deployed AI Engineer \u2013 Genesys Cloud locations Buffalo, NY posted on Posted 6 Days Ago R91498",
    "Skip to main content",
    "Software Development",
    "Software Engineer - .Net / API",
-   "Software Engineer - .Net / API locations Philadelphia, PA posted on Posted 2 Days Ago R88163",
+   "Software Engineer - .Net / API locations Philadelphia, PA posted on Posted 3 Days Ago R88163",
    "Software Engineer - Liquidity Reporting",
-   "Software Engineer - Liquidity Reporting locations Buffalo, NY posted on Posted 5 Days Ago R90364",
+   "Software Engineer - Liquidity Reporting locations Buffalo, NY posted on Posted 6 Days Ago R90364",
    "Software Engineer - Oracle Cloud Applications",
-   "Software Engineer - Oracle Cloud Applications locations Buffalo, NY posted on Posted 5 Days Ago R90957",
+   "Software Engineer - Oracle Cloud Applications locations Buffalo, NY posted on Posted 6 Days Ago R90957",
    "Sr. Software Engineer - .Net Full Stack",
-   "Sr. Software Engineer - .Net Full Stack locations Buffalo, NY posted on Posted 5 Days Ago R89766",
+   "Sr. Software Engineer - .Net Full Stack locations Buffalo, NY posted on Posted 6 Days Ago R89766",
    "careersitesupport@mtb.com",
    "competitive benefits"
   ],
-  "checked": "2026-11-25T11:58:00.461064-08:00"
+  "checked": "2026-11-26T11:38:57.811792-08:00"
  },
  "https://jobs.ashbyhq.com/neptune": {
   "company": "Neptune",
@@ -710,31 +713,31 @@
    "Growth \u2022 New York City \u2022 Full time \u2022 On-site",
    "Open Positions (3)"
   ],
-  "checked": "2026-11-25T11:58:00.461064-08:00"
+  "checked": "2026-11-26T11:38:57.811792-08:00"
  },
  "https://ryancompanies.wd5.myworkdayjobs.com/en-US/ryancompanies": {
   "company": "Ryan",
   "items": [
-   "1 - 20 of 244 jobs",
-   "244 JOBS FOUND",
+   "1 - 20 of 243 jobs",
+   "243 JOBS FOUND",
    "About Us",
    "EEO Policy and Reasonable Accommodation Notice",
    "Estimator II",
    "Estimator II - Mission Critical",
-   "Estimator II - Mission Critical locations 2 Locations posted on Posted 20 Days Ago R-101557",
+   "Estimator II - Mission Critical locations 2 Locations posted on Posted 21 Days Ago R-101557",
    "Estimator II locations 6 Locations posted on Posted 30+ Days Ago R-102019",
    "Follow Us",
    "Know your Rights",
    "Maintenance Engineer",
    "Maintenance Engineer II",
-   "Maintenance Engineer II locations Minneapolis posted on Posted 2 Days Ago R-101803",
+   "Maintenance Engineer II locations Minneapolis posted on Posted 3 Days Ago R-101803",
    "Maintenance Engineer locations Chicago posted on Posted 30+ Days Ago R-101923",
    "Maintenance Engineer locations Chicago posted on Posted 30+ Days Ago R-101925",
    "Marketing Manager - Southern Division",
-   "Marketing Manager - Southern Division locations Dallas posted on Posted 2 Days Ago R-102402",
+   "Marketing Manager - Southern Division locations Dallas posted on Posted 3 Days Ago R-102402",
    "Notice to Candidates",
    "Project Coordinator I",
-   "Project Coordinator I locations 2 Locations posted on Posted 14 Days Ago R-102298",
+   "Project Coordinator I locations 2 Locations posted on Posted 15 Days Ago R-102298",
    "Project Engineer",
    "Project Engineer Intern",
    "Project Engineer Intern locations 3 Locations posted on Posted 30+ Days Ago R-101907",
@@ -746,7 +749,7 @@
    "Project Manager II - National Industrial locations 2 Locations posted on Posted 30+ Days Ago R-101707",
    "Project Manager II locations Des Moines posted on Posted 30+ Days Ago R-102164",
    "Pursuit Specialist - Mission Critical Preconstruction",
-   "Pursuit Specialist - Mission Critical Preconstruction locations Minneapolis posted on Posted 2 Days Ago R-102392",
+   "Pursuit Specialist - Mission Critical Preconstruction locations Minneapolis posted on Posted 3 Days Ago R-102392",
    "R-101557",
    "R-101707",
    "R-101731",
@@ -771,17 +774,17 @@
    "Real Estate Coordinator locations 4 Locations posted on Posted 30+ Days Ago R-101922",
    "Real Estate Manager",
    "Real Estate Manager locations Chicago posted on Posted 30+ Days Ago R-101921",
-   "Real Estate Manager locations Des Moines posted on Posted 15 Days Ago R-102226",
+   "Real Estate Manager locations Des Moines posted on Posted 16 Days Ago R-102226",
    "Senior Project Engineer - National Industrial",
    "Senior Project Engineer - National Industrial locations 4 Locations posted on Posted 30+ Days Ago R-101835",
    "Skip to main content",
    "Sr. Manager Digital Marketing",
-   "Sr. Manager Digital Marketing locations 2 Locations posted on Posted 6 Days Ago R-102399",
+   "Sr. Manager Digital Marketing locations 2 Locations posted on Posted Yesterday R-102399",
    "Vice President Asset Management",
-   "Vice President Asset Management locations Chicago Downtown posted on Posted Today R-102461",
+   "Vice President Asset Management locations Chicago Downtown posted on Posted Yesterday R-102461",
    "View your Know your Rights poster"
   ],
-  "checked": "2026-11-25T11:58:00.461064-08:00"
+  "checked": "2026-11-26T11:38:57.811792-08:00"
  },
  "https://jobs.ashbyhq.com/paxoslabs": {
   "company": "Paxo Labs",
@@ -808,69 +811,73 @@
    "Smart Contract Engineer",
    "Smart Contract Engineer Engineering \u2022 In-Person or Remote | NYC Preferred \u2022 Full time \u2022 Hybrid"
   ],
-  "checked": "2026-11-25T11:58:00.461064-08:00"
+  "checked": "2026-11-26T11:38:57.811792-08:00"
  },
  "https://jobs.universityofcalifornia.edu/site/advancedsearch?keywords=&Campus%5Bcampus_id%5D=&multiple_locations=0&search=": {
   "company": "UCLA",
   "items": [
-   "(CNS) Clinical Nurse Specialist - Periop",
-   "(RN) Registered Nurse - IR and Imaging",
-   "(RN) Registered Nurse - NICU",
-   "(RN) Registered Nurse - Per Diem - Med Surg",
-   "(RN) Registered Nurse - Per Diem - Surg/Onc PCU",
-   "(RN) Registered Nurse - Trauma PCU",
+   "(NP) Nurse Pract. - Hematology & Cellular Therapy",
+   "(PA) Physician Asst- Hematology & Cellular Therapy",
    "(active) page 1",
-   "4-H Youth Development Community Education Specialist - Yuba City & Colusa, CA, Job ID 90031",
-   "Administrative Assistant",
-   "Administrative Assistant 3",
+   "Administrative Assistant III",
+   "Administrative Assistant III (Laboratory Directorate-Chief of Staff's Office)",
+   "Admitting worker-Admitting-Fulltime-Lakewood-Days",
+   "Blank Assistant 2",
+   "Campus Energy Performance Manager",
    "Campuses",
+   "Clinical Research Coordinator - Neurology",
+   "Deputy Chief Administrative Officer, Haas School of Business (7375U) #90178",
+   "Director of Campus Learning Assistance Services",
    "Job Search",
+   "Lawrence Berkeley National Laboratory (LBNL) is hiring an Administrative Assistant III to support the Laboratory Directorate. Reporting to the Chief of Staff (C",
    "Locations",
    "Medical Centers",
    "Next",
    "Other",
    "Scroll to search form",
    "Search Results",
-   "See UCSD Job Bulletin for description",
-   "Share (CNS) Clinical Nurse Specialist - Periop by email",
-   "Share (CNS) Clinical Nurse Specialist - Periop on Social Media",
-   "Share (RN) Registered Nurse - IR and Imaging by email",
-   "Share (RN) Registered Nurse - IR and Imaging on Social Media",
-   "Share (RN) Registered Nurse - NICU by email",
-   "Share (RN) Registered Nurse - NICU on Social Media",
-   "Share (RN) Registered Nurse - Per Diem - Med Surg by email",
-   "Share (RN) Registered Nurse - Per Diem - Med Surg on Social Media",
-   "Share (RN) Registered Nurse - Per Diem - Surg/Onc PCU by email",
-   "Share (RN) Registered Nurse - Per Diem - Surg/Onc PCU on Social Media",
-   "Share (RN) Registered Nurse - Trauma PCU by email",
-   "Share (RN) Registered Nurse - Trauma PCU on Social Media",
-   "Share 4-H Youth Development Community Education Specialist - Yuba City & Colusa, CA, Job ID 90031 by email",
-   "Share 4-H Youth Development Community Education Specialist - Yuba City & Colusa, CA, Job ID 90031 on Social Media",
-   "Share Administrative Assistant 3 by email",
-   "Share Administrative Assistant 3 on Social Media",
-   "Share Administrative Assistant by email",
-   "Share Administrative Assistant on Social Media",
-   "View full (CNS) Clinical Nurse Specialist - Periop job description at",
-   "View full (RN) Registered Nurse - IR and Imaging job description at",
-   "View full (RN) Registered Nurse - NICU job description at",
-   "View full (RN) Registered Nurse - Per Diem - Med Surg job description at",
-   "View full (RN) Registered Nurse - Per Diem - Surg/Onc PCU job description at",
-   "View full (RN) Registered Nurse - Trauma PCU job description at",
-   "View full 4-H Youth Development Community Education Specialist - Yuba City & Colusa, CA, Job ID 90031 job description at",
-   "View full Administrative Assistant 3 job description at",
-   "View full Administrative Assistant job description at",
+   "Share (NP) Nurse Pract. - Hematology & Cellular Therapy by email",
+   "Share (NP) Nurse Pract. - Hematology & Cellular Therapy on Social Media",
+   "Share (PA) Physician Asst- Hematology & Cellular Therapy by email",
+   "Share (PA) Physician Asst- Hematology & Cellular Therapy on Social Media",
+   "Share Administrative Assistant III (Laboratory Directorate-Chief of Staff's Office) by email",
+   "Share Administrative Assistant III (Laboratory Directorate-Chief of Staff's Office) on Social Media",
+   "Share Administrative Assistant III by email",
+   "Share Administrative Assistant III on Social Media",
+   "Share Admitting worker-Admitting-Fulltime-Lakewood-Days by email",
+   "Share Admitting worker-Admitting-Fulltime-Lakewood-Days on Social Media",
+   "Share Blank Assistant 2 by email",
+   "Share Blank Assistant 2 on Social Media",
+   "Share Campus Energy Performance Manager by email",
+   "Share Campus Energy Performance Manager on Social Media",
+   "Share Clinical Research Coordinator - Neurology by email",
+   "Share Clinical Research Coordinator - Neurology on Social Media",
+   "Share Deputy Chief Administrative Officer, Haas School of Business (7375U) #90178 by email",
+   "Share Deputy Chief Administrative Officer, Haas School of Business (7375U) #90178 on Social Media",
+   "Share Director of Campus Learning Assistance Services by email",
+   "Share Director of Campus Learning Assistance Services on Social Media",
+   "View full (NP) Nurse Pract. - Hematology & Cellular Therapy job description at",
+   "View full (PA) Physician Asst- Hematology & Cellular Therapy job description at",
+   "View full Administrative Assistant III (Laboratory Directorate-Chief of Staff's Office) job description at",
+   "View full Administrative Assistant III job description at",
+   "View full Admitting worker-Admitting-Fulltime-Lakewood-Days job description at",
+   "View full Blank Assistant 2 job description at",
+   "View full Campus Energy Performance Manager job description at",
+   "View full Clinical Research Coordinator - Neurology job description at",
+   "View full Deputy Chief Administrative Officer, Haas School of Business (7375U) #90178 job description at",
+   "View full Director of Campus Learning Assistance Services job description at",
    "[ + select multiple locations ]",
    "page 2",
    "page 3",
    "page 4",
    "page 5"
   ],
-  "checked": "2026-11-25T11:58:00.461064-08:00"
+  "checked": "2026-11-26T11:38:57.811792-08:00"
  },
  "https://jobsportal.ucr.edu/jobs?_gl=1*1pjo8xr*_ga*MTUxNzY4MDMwMC4xNzIxMTg3NjEx*_ga_S8BZQKWST2*MTcyNDc4MDY2My4xMTUuMS4xNzI0NzgxMjYyLjAuMC4w*_gcl_aw*R0NMLjE3MjQxNzEyODguRUFJYUlRb2JDaE1JdTZxRTQ4LVc5d0lWT0NpdEJoMWo2Z1Q1RUFBWUFTQUFFZ0w4c2ZEX0J3RQ..*_gcl_au*ODU4ODYzMDk2LjE3MjQxNzEyODg.*_ga_Z1RGSBHBF7*MTcyNDc4MDY2My4xMTYuMS4xNzI0NzgxMjYyLjAuMC4w": {
   "company": "UC Riverside",
   "items": [],
-  "checked": "2026-11-25T11:58:00.461064-08:00"
+  "checked": "2026-11-26T11:38:57.811792-08:00"
  },
  "https://careers.ignitetech.ai/jobs#jobs": {
   "company": "Khoros",
@@ -884,7 +891,7 @@
    "When the alarm fires, you are the first responder \u2014 but by the time you reach it, the AI agents you built and maintain h\u2026",
    "You've built your career looking after enterprise customers, protecting renewals, and turning at-risk accounts into loya\u2026"
   ],
-  "checked": "2026-11-25T11:58:00.461064-08:00"
+  "checked": "2026-11-26T11:38:57.811792-08:00"
  },
  "https://www.wheel.com/careers": {
   "company": "Wheel",
@@ -920,7 +927,7 @@
    "Working at Wheel",
    "info@wheel.com"
   ],
-  "checked": "2026-11-25T11:58:00.461064-08:00"
+  "checked": "2026-11-26T11:38:57.811792-08:00"
  },
  "https://jobs.lever.co/artera-2": {
   "company": "Artera",
@@ -979,14 +986,14 @@
    "Strategy & GTM",
    "Strategy & GTM Product Marketing"
   ],
-  "checked": "2026-11-25T11:58:00.461064-08:00"
+  "checked": "2026-11-26T11:38:57.811792-08:00"
  },
  "https://www.twelvelabs.io/careers#joblist": {
   "company": "TwelveLabs",
   "items": [
    "See yourself in one of our open roles."
   ],
-  "checked": "2026-11-25T11:58:00.461064-08:00"
+  "checked": "2026-11-26T11:38:57.811792-08:00"
  },
  "https://jobs.gem.com/unsiloed-ai": {
   "company": "Unsiloed AI",
@@ -995,12 +1002,12 @@
    "Founding ML Researcher San Francisco \u2022 In office",
    "Founding Software Engineer - Backend and Infrastructure San Francisco \u2022 In office"
   ],
-  "checked": "2026-11-25T11:58:00.461064-08:00"
+  "checked": "2026-11-26T11:38:57.811792-08:00"
  },
  "https://phantom.com/careers#open-positions": {
   "company": "Phantom",
   "items": [],
-  "checked": "2026-11-25T11:58:00.461064-08:00"
+  "checked": "2026-11-26T11:38:57.811792-08:00"
  },
  "https://job-boards.greenhouse.io/lilasciences?departments%5B%5D=4022721009&departments%5B%5D=4011901009": {
   "company": "Lila Sciences",
@@ -1101,7 +1108,7 @@
    "Technical Program Manager, AI Data",
    "Technical Program Manager, AI Data Cambridge, MA USA; San Francisco, CA USA"
   ],
-  "checked": "2026-11-25T11:58:00.461064-08:00"
+  "checked": "2026-11-26T11:38:57.811792-08:00"
  },
  "https://job-boards.greenhouse.io/vacationinc": {
   "company": "Vacation",
@@ -1120,15 +1127,15 @@
    "People",
    "Remote",
    "Sales",
-   "Senior Director of Operations New",
-   "Senior Director of Operations New Remote"
+   "Senior Director of Operations",
+   "Senior Director of Operations Remote"
   ],
-  "checked": "2026-11-25T11:58:00.461064-08:00"
+  "checked": "2026-11-26T11:38:57.811792-08:00"
  },
  "https://www.actively.ai/careers#open-positions": {
   "company": "Actively AI",
   "items": [],
-  "checked": "2026-11-25T11:58:00.461064-08:00"
+  "checked": "2026-11-26T11:38:57.811792-08:00"
  },
  "https://jobs.ashbyhq.com/typesafe-ai?utm_source=QLrx0vq4BW": {
   "company": "Typesafe AI",
@@ -1159,6 +1166,8 @@
    "Enterprise Product Designer Design \u2022 San Francisco Office \u2022 Full time \u2022 On-site",
    "Forward Deployed Engineer",
    "Forward Deployed Engineer Engineering \u2022 San Francisco Office \u2022 Full time \u2022 On-site",
+   "Founding Account Executive",
+   "Founding Account Executive GTM \u2022 San Francisco Office \u2022 Full time \u2022 On-site",
    "Founding Legal",
    "Founding Legal Business Operations \u2022 San Francisco Office \u2022 Full time \u2022 On-site",
    "Founding Product Manager",
@@ -1183,15 +1192,13 @@
    "Safety Jevroni (Contract, 6 weeks)",
    "Safety Jevroni (Contract, 6 weeks) Engineering \u2022 San Francisco Office \u2022 Contract \u2022 On-site",
    "San Francisco office \u00b7 In person",
-   "Security & Trust Analyst",
-   "Security & Trust Analyst GTM \u2022 San Francisco Office \u2022 Full time \u2022 On-site",
    "Software Engineer Generalist",
    "Software Engineer Generalist Engineering \u2022 San Francisco Office \u2022 Full time \u2022 On-site",
    "Visual Designer",
    "Visual Designer Design \u2022 San Francisco Office \u2022 Full time \u2022 On-site",
    "We\u2019re an AI lab building intelligence beyond chat: AI designed to work inside software and power real-world automation"
   ],
-  "checked": "2026-11-25T11:58:00.461064-08:00"
+  "checked": "2026-11-26T11:38:57.811792-08:00"
  },
  "https://www.moveworks.com/us/en/company/careers#open-roles": {
   "company": "Move Works",
@@ -1273,7 +1280,6 @@
    "Silver spring, Maryland, United states, Full-time",
    "Soborg, Denmark, Full-time",
    "Software Engineer, Agent Eval Platform",
-   "Software Engineer, Agentic Systems - Moveworks",
    "Solution Sales Executive - Core Business Workflow",
    "Solution Sales Executive - MoveWorks",
    "Solution Sales Executive - Moveworks",
@@ -1307,6 +1313,7 @@
    "Staines, United kingdom, Full-time",
    "Stockholm, Sweden, Full-time",
    "Sydney, Nsw, Australia, Full-time",
+   "Tech Lead, Agent Eval Platform",
    "Technical Support Engineer - Moveworks",
    "Tokyo, Japan, Full-time",
    "Toronto, Ontario, Canada, Full-time",
@@ -1315,7 +1322,7 @@
    "Wien, Austria, Full-time",
    "no results"
   ],
-  "checked": "2026-11-25T11:58:00.461064-08:00"
+  "checked": "2026-11-26T11:38:57.811792-08:00"
  },
  "https://jobs.ashbyhq.com/reflectionai": {
   "company": "Reflection",
@@ -1450,47 +1457,44 @@
    "U.S. Government \u2022 Washington, D.C. \u2022 Full time \u2022 On-site",
    "accommodations@reflection.ai"
   ],
-  "checked": "2026-11-25T11:58:00.461064-08:00"
+  "checked": "2026-11-26T11:38:57.811792-08:00"
  },
  "https://rochester.wd5.myworkdayjobs.com/en-US/UR_Staff?source=LinkedIn": {
   "company": "University of Rochester",
   "items": [
-   "1 - 20 of 1423 jobs",
-   "1423 JOBS FOUND",
+   "1 - 20 of 1419 jobs",
+   "1419 JOBS FOUND",
    "About Us",
    "Academic Coach, Pre-College Programs",
-   "Academic Coach, Pre-College Programs locations Dewey posted on Posted Today R276554",
+   "Academic Coach, Pre-College Programs locations Dewey posted on Posted Yesterday R276554",
    "Administrative Assistant IV",
-   "Administrative Assistant IV locations Strong Memorial Hospital posted on Posted Today R276393",
+   "Administrative Assistant IV locations Strong Memorial Hospital posted on Posted Yesterday R276393",
    "Business Administrator I",
-   "Business Administrator I remote type Hybrid locations School of Medicine and Dentistry posted on Posted Yesterday R276489",
+   "Business Administrator I remote type Hybrid locations School of Medicine and Dentistry posted on Posted 2 Days Ago R276489",
    "Dental Aide",
-   "Dental Aide locations Eastman Dental Center posted on Posted Today R276626",
+   "Dental Aide locations Eastman Dental Center posted on Posted Yesterday R276626",
    "Document Imaging Assistant",
-   "Document Imaging Assistant locations Strong Memorial Hospital posted on Posted Today R276321",
-   "Financial Analyst II",
-   "Financial Analyst II locations Wilmot posted on Posted Yesterday R275649",
+   "Document Imaging Assistant locations Strong Memorial Hospital posted on Posted Yesterday R276321",
    "GME Operations Specialist - Residencies",
-   "GME Operations Specialist - Residencies locations S & GG Wing - SMD posted on Posted Today R275505",
+   "GME Operations Specialist - Residencies locations S & GG Wing - SMD posted on Posted Yesterday R275505",
    "HIM Document Imaging Assistant I",
-   "HIM Document Imaging Assistant I locations 2619 West Henrietta Road posted on Posted Today R276435",
-   "HIM Document Imaging Assistant I locations 2619 West Henrietta Road posted on Posted Today R276436",
+   "HIM Document Imaging Assistant I locations 2619 West Henrietta Road posted on Posted Yesterday R276435",
+   "HIM Document Imaging Assistant I locations 2619 West Henrietta Road posted on Posted Yesterday R276436",
    "If you\u2019re looking for a career in higher education or health care, the University of Rochester may offer the perfect opportunity for your background and goals.",
    "Learn. Discover. Heal. Create.",
    "Medical Records Coder III, Complex",
-   "Medical Records Coder III, Complex remote type Remote locations 2619 West Henrietta Road posted on Posted Today R276194",
+   "Medical Records Coder III, Complex remote type Remote locations 2619 West Henrietta Road posted on Posted Yesterday R276194",
    "Medical Records Coder III,Complex",
-   "Medical Records Coder III,Complex remote type Remote locations 2619 West Henrietta Road posted on Posted Today R276195",
+   "Medical Records Coder III,Complex remote type Remote locations 2619 West Henrietta Road posted on Posted Yesterday R276195",
    "O&P Fitter-Tier I-1",
-   "O&P Fitter-Tier I-1 locations 10 Miracle Mile Drive posted on Posted Today R276630",
+   "O&P Fitter-Tier I-1 locations 10 Miracle Mile Drive posted on Posted Yesterday R276630",
    "O&P Fitter-Tier I-2",
-   "O&P Fitter-Tier I-2 locations 10 Miracle Mile Drive posted on Posted Today R276631",
+   "O&P Fitter-Tier I-2 locations 10 Miracle Mile Drive posted on Posted Yesterday R276631",
    "Physical Therapist 1- TAR",
-   "Physical Therapist 1- TAR locations 10 Miracle Mile Drive posted on Posted Today R276633",
+   "Physical Therapist 1- TAR locations 10 Miracle Mile Drive posted on Posted Yesterday R276633",
    "Project Manager II, Facilities",
-   "Project Manager II, Facilities locations Strong Memorial Hospital posted on Posted Yesterday R276625",
+   "Project Manager II, Facilities locations Strong Memorial Hospital posted on Posted 2 Days Ago R276625",
    "R275505",
-   "R275649",
    "R276194",
    "R276195",
    "R276321",
@@ -1507,21 +1511,24 @@
    "R276630",
    "R276631",
    "R276633",
+   "R276634",
    "R276638",
    "R276644",
    "Referral & Prior Auth Rep III",
-   "Referral & Prior Auth Rep III locations Strong Memorial Hospital posted on Posted Yesterday R276621",
+   "Referral & Prior Auth Rep III locations Strong Memorial Hospital posted on Posted 2 Days Ago R276621",
+   "Revenue Cycle Analyst II",
+   "Revenue Cycle Analyst II remote type Hybrid locations Rochester Technology Park posted on Posted Today R276634",
    "Skip to main content",
    "Sr Chemical Engineer",
-   "Sr Chemical Engineer locations Laboratory for Laser Energetics posted on Posted Today R276644",
+   "Sr Chemical Engineer locations Laboratory for Laser Energetics posted on Posted Yesterday R276644",
    "Supervisor, Residential Dining-1",
-   "Supervisor, Residential Dining-1 locations Frederick Douglass posted on Posted Today R276561",
+   "Supervisor, Residential Dining-1 locations Frederick Douglass posted on Posted Yesterday R276561",
    "URMC Academic Programs Assistant Director",
-   "URMC Academic Programs Assistant Director locations River Road Complex Advancement posted on Posted Today R276638",
+   "URMC Academic Programs Assistant Director locations River Road Complex Advancement posted on Posted Yesterday R276638",
    "Warehouse Dist Clerk II",
-   "Warehouse Dist Clerk II locations Strong Memorial Hospital posted on Posted Yesterday R276443"
+   "Warehouse Dist Clerk II locations Strong Memorial Hospital posted on Posted 2 Days Ago R276443"
   ],
-  "checked": "2026-11-25T11:58:00.461064-08:00"
+  "checked": "2026-11-26T11:38:57.811792-08:00"
  },
  "https://litera.wd12.myworkdayjobs.com/en-US/Litera_Careers": {
   "company": "Litera",
@@ -1529,38 +1536,38 @@
    "1 - 20 of 46 jobs",
    "46 JOBS FOUND",
    "AI Composer",
-   "AI Composer locations Denver, CO time type Full time posted on Posted 5 Days Ago R-501468",
+   "AI Composer locations Denver, CO time type Full time posted on Posted 6 Days Ago R-501468",
    "About Us",
    "Associate AI Platform Engineer",
-   "Associate AI Platform Engineer locations Denver, CO time type Full time posted on Posted 8 Days Ago R-501340",
+   "Associate AI Platform Engineer locations Denver, CO time type Full time posted on Posted 9 Days Ago R-501340",
    "Associate, Legal Knowledge Engineering",
-   "Associate, Legal Knowledge Engineering locations 6 Locations time type Full time posted on Posted 2 Days Ago R-501333",
+   "Associate, Legal Knowledge Engineering locations 6 Locations time type Full time posted on Posted 3 Days Ago R-501333",
    "Customer Adoption Manager, Corporate",
-   "Customer Adoption Manager, Corporate locations 3 Locations time type Full time posted on Posted 22 Days Ago R-501432",
+   "Customer Adoption Manager, Corporate locations 3 Locations time type Full time posted on Posted 23 Days Ago R-501432",
    "Customer Adoption Manager, Enterprise",
-   "Customer Adoption Manager, Enterprise locations 3 Locations time type Full time posted on Posted 16 Days Ago R-501430",
+   "Customer Adoption Manager, Enterprise locations 3 Locations time type Full time posted on Posted 17 Days Ago R-501430",
    "Customer Adoption Manager, Large Law",
-   "Customer Adoption Manager, Large Law locations 3 Locations time type Full time posted on Posted 22 Days Ago R-501431",
+   "Customer Adoption Manager, Large Law locations 3 Locations time type Full time posted on Posted 23 Days Ago R-501431",
    "Data Services Analyst",
-   "Data Services Analyst locations Raleigh, NC time type Full time posted on Posted 7 Days Ago R-501458",
+   "Data Services Analyst locations Raleigh, NC time type Full time posted on Posted 8 Days Ago R-501458",
    "Director, Product Operations (Product Operating Model + Leadership)",
-   "Director, Product Operations (Product Operating Model + Leadership) locations 2 Locations time type Full time posted on Posted 6 Days Ago R-501306",
+   "Director, Product Operations (Product Operating Model + Leadership) locations 2 Locations time type Full time posted on Posted 7 Days Ago R-501306",
    "Follow Us",
    "Implementation Consultant",
-   "Implementation Consultant locations 2 Locations time type Full time posted on Posted 7 Days Ago R-501456",
-   "Implementation Consultant locations Raleigh, NC time type Full time posted on Posted 7 Days Ago R-501457",
+   "Implementation Consultant locations 2 Locations time type Full time posted on Posted 8 Days Ago R-501456",
+   "Implementation Consultant locations Raleigh, NC time type Full time posted on Posted 8 Days Ago R-501457",
    "Instructional Design Specialist",
-   "Instructional Design Specialist locations 3 Locations time type Full time posted on Posted 9 Days Ago R-501448",
+   "Instructional Design Specialist locations 3 Locations time type Full time posted on Posted 10 Days Ago R-501448",
    "Legal Product Consultant",
-   "Legal Product Consultant locations 6 Locations time type Full time posted on Posted Yesterday R-501452",
+   "Legal Product Consultant locations 6 Locations time type Full time posted on Posted 2 Days Ago R-501452",
    "Manager, Customer Adoption (Enterprise)",
-   "Manager, Customer Adoption (Enterprise) locations Raleigh, NC time type Full time posted on Posted Yesterday R-501445",
+   "Manager, Customer Adoption (Enterprise) locations Raleigh, NC time type Full time posted on Posted 2 Days Ago R-501445",
    "Manager, Legal Knowledge Engineering",
-   "Manager, Legal Knowledge Engineering locations 6 Locations time type Full time posted on Posted 8 Days Ago R-501370",
+   "Manager, Legal Knowledge Engineering locations 6 Locations time type Full time posted on Posted 9 Days Ago R-501370",
    "Manager, Technical Support",
-   "Manager, Technical Support locations Denver, CO time type Full time posted on Posted 13 Days Ago R-501442",
+   "Manager, Technical Support locations Denver, CO time type Full time posted on Posted 14 Days Ago R-501442",
    "Partner Development Manager",
-   "Partner Development Manager locations Raleigh, NC time type Full time posted on Posted 7 Days Ago R-501453",
+   "Partner Development Manager locations Raleigh, NC time type Full time posted on Posted 8 Days Ago R-501453",
    "R-501306",
    "R-501310",
    "R-501333",
@@ -1582,22 +1589,22 @@
    "R-501458",
    "R-501468",
    "Senior Product Manager",
-   "Senior Product Manager locations 3 Locations time type Full time posted on Posted 7 Days Ago R-501400",
+   "Senior Product Manager locations 3 Locations time type Full time posted on Posted 8 Days Ago R-501400",
    "Skip to main content",
    "Software Engineer",
-   "Software Engineer locations India-Ahmedabad-Office time type Full time posted on Posted 20 Days Ago R-501439",
+   "Software Engineer locations India-Ahmedabad-Office time type Full time posted on Posted 21 Days Ago R-501439",
    "Sr. Growth Marketing Manager",
-   "Sr. Growth Marketing Manager locations Canada-Toronto, ON-Office time type Full time posted on Posted 7 Days Ago R-501450",
+   "Sr. Growth Marketing Manager locations Canada-Toronto, ON-Office time type Full time posted on Posted 8 Days Ago R-501450",
    "Territory Account Executive",
-   "Territory Account Executive locations 2 Locations posted on Posted 14 Days Ago R-501310"
+   "Territory Account Executive locations 2 Locations posted on Posted 15 Days Ago R-501310"
   ],
-  "checked": "2026-11-25T11:58:00.461064-08:00"
+  "checked": "2026-11-26T11:38:57.811792-08:00"
  },
  "https://ghr.wd1.myworkdayjobs.com/en-US/Lateral-US": {
   "company": "BofA",
   "items": [
-   "1 - 20 of 1998 jobs",
-   "1998 JOBS FOUND",
+   "1 - 20 of 1990 jobs",
+   "1990 JOBS FOUND",
    "26025614",
    "26031767",
    "26033969",
@@ -1621,34 +1628,34 @@
    "About Us",
    "Bank of America",
    "Brokerage and Advisory Solutions Financial Advisor",
-   "Brokerage and Advisory Solutions Financial Advisor locations New York time type Full time posted on Posted 6 Days Ago 26033969",
+   "Brokerage and Advisory Solutions Financial Advisor locations New York time type Full time posted on Posted 7 Days Ago 26033969",
    "Business Solutions Advisor - Costa Mesa Financial Center - Bilingual Spanish Required",
    "Business Solutions Advisor - Fremont Beacon Financial Center",
-   "Business Solutions Advisor - Fremont Beacon Financial Center locations Fremont time type Full time posted on Posted 16 Days Ago 26041778",
+   "Business Solutions Advisor - Fremont Beacon Financial Center locations Fremont time type Full time posted on Posted 17 Days Ago 26041778",
    "Business Solutions Advisor - Hallandale Beach Financial Center - Hallandale , FL",
-   "Business Solutions Advisor - Hallandale Beach Financial Center - Hallandale , FL locations Hallandale time type Full time posted on Posted 5 Days Ago 26043005",
+   "Business Solutions Advisor - Hallandale Beach Financial Center - Hallandale , FL locations Hallandale time type Full time posted on Posted 6 Days Ago 26043005",
    "Business Solutions Advisor - Hesperian La Playa Financial Center - Bilingual Spanish Required",
    "Business Solutions Advisor - Lake Grove Financial Center",
-   "Business Solutions Advisor - Lake Grove Financial Center locations Lake Oswego time type Full time posted on Posted 13 Days Ago 26042240",
+   "Business Solutions Advisor - Lake Grove Financial Center locations Lake Oswego time type Full time posted on Posted 14 Days Ago 26042240",
    "Business Solutions Advisor - Riverside Woodman Financial Center - Armenian Required",
    "Business Solutions Advisor - San Diego Market",
-   "Business Solutions Advisor - San Diego Market locations San Diego time type Full time posted on Posted Yesterday 26043760",
+   "Business Solutions Advisor - San Diego Market locations San Diego time type Full time posted on Posted 2 Days Ago 26043760",
    "Consumer Investments Account Maintenance Generalist - Fort Worth, TX",
-   "Consumer Investments Account Maintenance Generalist - Fort Worth, TX locations Fort Worth time type Full time posted on Posted Yesterday 26043682",
+   "Consumer Investments Account Maintenance Generalist - Fort Worth, TX locations Fort Worth time type Full time posted on Posted 2 Days Ago 26043682",
    "Consumer Investments Money Movement Service Representative - Chandler, AZ",
-   "Consumer Investments Money Movement Service Representative - Chandler, AZ locations Chandler time type Full time posted on Posted 8 Days Ago 26042765",
+   "Consumer Investments Money Movement Service Representative - Chandler, AZ locations Chandler time type Full time posted on Posted 9 Days Ago 26042765",
    "Credit Advisor - Global Wealth & Investment Management",
-   "Credit Advisor - Global Wealth & Investment Management locations 2 Locations time type Full time posted on Posted 5 Days Ago 26043325",
+   "Credit Advisor - Global Wealth & Investment Management locations 2 Locations time type Full time posted on Posted 6 Days Ago 26043325",
    "Credit Analyst III - Financial Analysis Monitoring & Portfolio Management Specialist",
    "Credit Officer II - Registered - Global Wealth & Investment Management - Securities Based Lending Specialist - Los Angeles",
    "Credit Underwriter I/II - Custom Lending - Global Wealth & Investment Management",
-   "Credit Underwriter I/II - Custom Lending - Global Wealth & Investment Management locations 2 Locations time type Full time posted on Posted 5 Days Ago 26043389",
+   "Credit Underwriter I/II - Custom Lending - Global Wealth & Investment Management locations 2 Locations time type Full time posted on Posted 6 Days Ago 26043389",
    "Credit Underwriter II / Sr. Credit Underwriter - Banc of America Public Capital Corporation Government Finance",
    "Each employee brings unique skills, background and opinions. We see opportunity and inclusion as our platform for innovation and a key component in our success.",
    "Follow Us",
    "Global Impact",
    "Merrill Market Supervision Manager",
-   "Merrill Market Supervision Manager locations Minneapolis time type Full time posted on Posted 5 Days Ago 26025614",
+   "Merrill Market Supervision Manager locations Minneapolis time type Full time posted on Posted 6 Days Ago 26025614",
    "Opportunity and Inclusion",
    "Our Values",
    "Our Values Learn about our four values that represent what we believe.",
@@ -1656,16 +1663,16 @@
    "Partnering Locally Learn about some of the ways Bank of America is making a difference in the communities we serve.",
    "Pay Transparency:",
    "Retail Client Manager - Consumer Vehicle Lending/Dealer Sales - Albany, NY Market",
-   "Retail Client Manager - Consumer Vehicle Lending/Dealer Sales - Albany, NY Market locations Albany time type Full time posted on Posted 8 Days Ago 26042728",
+   "Retail Client Manager - Consumer Vehicle Lending/Dealer Sales - Albany, NY Market locations Albany time type Full time posted on Posted 9 Days Ago 26042728",
    "Retail Client Manager - Consumer Vehicle Lending/Dealer Sales - Camp Hill, PA Market",
    "Retail Client Manager - Consumer Vehicle Lending/Dealer Sales - Woodbury, MN Market",
-   "Retail Client Manager - Consumer Vehicle Lending/Dealer Sales - Woodbury, MN Market locations WOODBURY time type Full time posted on Posted 8 Days Ago 26042716",
+   "Retail Client Manager - Consumer Vehicle Lending/Dealer Sales - Woodbury, MN Market locations WOODBURY time type Full time posted on Posted 9 Days Ago 26042716",
    "Skip to main content",
    "Special Asset Group Credit Officer II",
-   "Special Asset Group Credit Officer II locations 2 Locations time type Full time posted on Posted 15 Days Ago 26041930",
+   "Special Asset Group Credit Officer II locations 2 Locations time type Full time posted on Posted 16 Days Ago 26041930",
    "https://careers.bankofamerica.com/en-us/pay-transparency"
   ],
-  "checked": "2026-11-25T11:58:00.461064-08:00"
+  "checked": "2026-11-26T11:38:57.811792-08:00"
  },
  "https://job-boards.eu.greenhouse.io/unframe": {
   "company": "Unframe",
@@ -1708,8 +1715,8 @@
    "Product Growth",
    "Product Manager",
    "Product Manager Tel Aviv-Yafo, Tel Aviv District, Israel",
-   "Recruiter New",
-   "Recruiter New Tel Aviv-Yafo, Tel Aviv District, Israel",
+   "Recruiter",
+   "Recruiter Tel Aviv-Yafo, Tel Aviv District, Israel",
    "Regional GM - Atlanta (Remote)",
    "Regional GM - Atlanta (Remote) Atlanta, Georgia, United States",
    "Regional GM - Boston (Remote)",
@@ -1733,7 +1740,7 @@
    "VP, Global Partnerships & Alliances United States",
    "www.unframe.ai"
   ],
-  "checked": "2026-11-25T11:58:00.461064-08:00"
+  "checked": "2026-11-26T11:38:57.811792-08:00"
  },
  "https://job-boards.greenhouse.io/coherehealth?departments%5B%5D=4091050003": {
   "company": "cohere",
@@ -1806,7 +1813,7 @@
    "Staff Software Engineer, Integration Hyderabad, Telangana, India",
    "United States"
   ],
-  "checked": "2026-11-25T11:58:00.461064-08:00"
+  "checked": "2026-11-26T11:38:57.811792-08:00"
  },
  "https://www.abaka.ai/careers": {
   "company": "Abaka",
@@ -1836,23 +1843,19 @@
    "Support You to Do Your Best Work",
    "What Excites You About Abaka AI"
   ],
-  "checked": "2026-11-25T11:58:00.461064-08:00"
+  "checked": "2026-11-26T11:38:57.811792-08:00"
  },
  "https://careers.yale.edu/us/en/search-results": {
   "company": "yale",
   "items": [
    "Search Results"
   ],
-  "checked": "2026-11-25T11:58:00.461064-08:00"
+  "checked": "2026-11-26T11:38:57.811792-08:00"
  },
  "https://credit-mgmt.com/index.php/positions/": {
   "company": "Credit Management",
-  "items": [
-   "Build Your Future at Credit Management",
-   "Learn about our culture.",
-   "WATCH VIDEO"
-  ],
-  "checked": "2026-11-25T11:58:00.461064-08:00"
+  "items": [],
+  "checked": "2026-11-26T11:38:57.811792-08:00"
  },
  "https://mimecast.wd5.myworkdayjobs.com/en-US/Mimecast-Careers?jobFamilyGroup=6a5e3768b3aa01c38ad4930ff601f90d": {
   "company": "Mimecast",
@@ -1881,8 +1884,8 @@
    "Senior Architect - GCI",
    "Senior Architect - GCI locations India - Bengaluru posted on Posted 30+ Days Ago India - Bengaluru R6440",
    "Senior Forward Deployed Engineer",
-   "Senior Forward Deployed Engineer locations Australia - Victoria posted on Posted Today Australia - Victoria R6727",
-   "Senior Forward Deployed Engineer locations Singapore posted on Posted Today Singapore R6726",
+   "Senior Forward Deployed Engineer locations Australia - Victoria posted on Posted Yesterday Australia - Victoria R6727",
+   "Senior Forward Deployed Engineer locations Singapore posted on Posted Yesterday Singapore R6726",
    "Senior Program Manager",
    "Senior Software Engineer",
    "Senior Software Engineer locations India - Bengaluru posted on Posted 30+ Days Ago India - Bengaluru R6624",
@@ -1893,7 +1896,7 @@
    "United States of America - Massachusetts - Lexington",
    "United States of America - Ohio - Columbus"
   ],
-  "checked": "2026-11-25T11:58:00.461064-08:00"
+  "checked": "2026-11-26T11:38:57.811792-08:00"
  },
  "https://job-boards.greenhouse.io/gradial?gh_src=bh1uowf59us": {
   "company": "Gradial",
@@ -1955,7 +1958,7 @@
    "Talent Pool New Seattle, WA",
    "Transformation"
   ],
-  "checked": "2026-11-25T11:58:00.461064-08:00"
+  "checked": "2026-11-26T11:38:57.811792-08:00"
  },
  "https://jobs.gusto.com/boards/clair-health-inc-4e0ff175-30cb-432e-87e7-97b74fdd8b4f": {
   "company": "Clair Health",
@@ -2010,7 +2013,7 @@
    "Social Media Creative (Contract)",
    "Social Media Creative (Contract) Marketing \u2022 New York City \u2022 Contract \u2022 On-site $50 \u2013 $125 per hour"
   ],
-  "checked": "2026-11-25T11:58:00.461064-08:00"
+  "checked": "2026-11-26T11:38:57.811792-08:00"
  },
  "https://jobs.ashbyhq.com/trovy": {
   "company": "Trovy",
@@ -2038,7 +2041,7 @@
    "VP, Marketing",
    "VP, Marketing Marketing \u2022 New York City \u2022 Full time \u2022 On-site"
   ],
-  "checked": "2026-11-25T11:58:00.461064-08:00"
+  "checked": "2026-11-26T11:38:57.811792-08:00"
  },
  "https://forgepoint.ai/careers#open-roles": {
   "company": "ForgePoint",
@@ -2048,7 +2051,7 @@
    "Loading open roles\u2026",
    "View roles on Ashby \u2197"
   ],
-  "checked": "2026-11-25T11:58:00.461064-08:00"
+  "checked": "2026-11-26T11:38:57.811792-08:00"
  },
  "https://jobs.ashbyhq.com/partiful": {
   "company": "Partiful",
@@ -2089,13 +2092,12 @@
    "\ud83e\uddbe Head of Engineering",
    "\ud83e\uddbe Head of Engineering Engineering \u2022 New York, NY \u2022 Full time \u2022 On-site"
   ],
-  "checked": "2026-11-25T11:58:00.461064-08:00"
+  "checked": "2026-11-26T11:38:57.811792-08:00"
  },
  "https://jobs.ashbyhq.com/socket": {
   "company": "Socket",
   "items": [
    "$110K \u2013 $170K \u2022 Offers Equity",
-   "$120K \u2022 Offers Equity \u2022 Offers Commission",
    "$125K \u2013 $160K \u2022 Offers Equity \u2022 Offers Commission",
    "$125K \u2013 $200K \u2022 Offers Equity",
    "$126K \u2013 $170K \u2022 Offers Equity",
@@ -2105,12 +2107,8 @@
    "$165K \u2013 $220K \u2022 Offers Equity \u2022 Offers Commission",
    "$190K \u2013 $250K \u2022 Offers Equity \u2022 Offers Commission",
    "$300K \u2013 $350K \u2022 Offers Equity",
-   "Account Executive, EMEA",
-   "Account Executive, EMEA Sales \u2022 United Kingdom; Denmark; Portugal \u2022 Full time \u2022 Remote",
    "Account Executive, Japan",
    "Account Executive, Japan Sales \u2022 Japan \u2022 Full time \u2022 Remote",
-   "Account Executive, SMB",
-   "Account Executive, SMB Sales \u2022 United States \u2022 Full time \u2022 Remote $120K \u2022 Offers Equity \u2022 Offers Commission",
    "Commercial Counsel",
    "Commercial Counsel Operations & Strategy \u2022 United States \u2022 Full time \u2022 Remote $140K \u2013 $180K",
    "Customer Engineering \u2022 United States \u2022 Full time \u2022 Remote",
@@ -2141,7 +2139,7 @@
    "Manager, Technical Account Teams (Enterprise) Customer Success \u2022 United States; Canada \u2022 Full time \u2022 Remote",
    "Manager, Technical Account Teams (Europe)",
    "Manager, Technical Account Teams (Europe) Customer Success \u2022 United Kingdom; Denmark; Remote \u2022 Full time \u2022 Remote",
-   "Open Positions (24)",
+   "Open Positions (22)",
    "Operations & Strategy \u2022 United States \u2022 Full time \u2022 Remote",
    "Research Intern",
    "Research Intern Socket Labs \u2022 United States \u2022 Full time \u2022 Remote",
@@ -2156,8 +2154,6 @@
    "Sales Engineering \u2022 United Kingdom; Denmark; Portugal \u2022 Full time \u2022 Remote",
    "Sales Engineering \u2022 United States \u2022 Full time \u2022 Remote",
    "Sales \u2022 Japan \u2022 Full time \u2022 Remote",
-   "Sales \u2022 United Kingdom; Denmark; Portugal \u2022 Full time \u2022 Remote",
-   "Sales \u2022 United States \u2022 Full time \u2022 Remote",
    "Senior Platform Engineer",
    "Senior Platform Engineer Technology \u2022 Remote \u2022 Full time",
    "Socket Labs \u2022 United States \u2022 Full time \u2022 Remote",
@@ -2184,7 +2180,7 @@
    "Vulnerability Research Engineer Vulnerability Research \u2022 Remote \u2022 Full time $110K \u2013 $170K \u2022 Offers Equity",
    "Vulnerability Research \u2022 Remote \u2022 Full time"
   ],
-  "checked": "2026-11-25T11:58:00.461064-08:00"
+  "checked": "2026-11-26T11:38:57.811792-08:00"
  },
  "https://www.paraform.com/careers#job-listings": {
   "company": "Paraform",
@@ -2199,7 +2195,7 @@
    "People Operations 1 role",
    "Talent 2 roles"
   ],
-  "checked": "2026-11-25T11:58:00.461064-08:00"
+  "checked": "2026-11-26T11:38:57.811792-08:00"
  },
  "https://www.andera.ai/careers": {
   "company": "Andera",
@@ -2219,7 +2215,7 @@
    "Read on Axios Read about our $37M raise on Axios",
    "That is why we are building Andera."
   ],
-  "checked": "2026-11-25T11:58:00.461064-08:00"
+  "checked": "2026-11-26T11:38:57.811792-08:00"
  },
  "https://www.herosafety.com/about": {
   "company": "Hero",
@@ -2280,6 +2276,6 @@
    "What You'll Do:",
    "jobs@herosafety.com"
   ],
-  "checked": "2026-11-25T11:58:00.461064-08:00"
+  "checked": "2026-11-26T11:38:57.811792-08:00"
  }
 }
