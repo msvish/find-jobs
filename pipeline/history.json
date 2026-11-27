@@ -1,5 +1,28 @@
 [
  {
+  "checked": "2026-11-27T13:34:10.805953-08:00",
+  "findings": [
+   {
+    "company": "Gradial",
+    "url": "https://job-boards.greenhouse.io/gradial?gh_src=bh1uowf59us",
+    "first": false,
+    "emails": [],
+    "items": [
+     {
+      "title": "Staff Software Engineer, Web & Email Infrastructure New",
+      "loc": "Seattle, WA",
+      "ok": "match",
+      "score": 2
+     }
+    ]
+   }
+  ],
+  "errors": [
+   "Rotto: 429 Client Error: Too Many Requests for url: https://www.rotto.com/careers",
+   "Clair Health: 403 Client Error: Forbidden for url: https://jobs.gusto.com/boards/clair-health-inc-4e0ff175-30cb-432e-87e7-97b74fdd8b4f"
+  ]
+ },
+ {
   "checked": "2026-11-27T11:29:48.998247-08:00",
   "findings": [
    {
