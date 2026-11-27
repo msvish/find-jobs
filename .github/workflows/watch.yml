@@ -117,11 +117,33 @@ jobs:
         with:
           ref: ${{ github.ref_name }} # latest commit, including the bot's results from the watch job
 
+      - name: Debug — verify files before deploy
+        run: |
+          echo "=== watch job dir output: '${{ needs.watch.outputs.dir }}' ==="
+          echo "=== repo root contents ==="
+          ls -la
+          echo "=== pipeline/ contents ==="
+          ls -la "${{ needs.watch.outputs.dir }}/" || echo "ERROR: dir not found"
+          echo "=== git tracked files ==="
+          git ls-files "${{ needs.watch.outputs.dir }}/"
+
       - name: Build site
         run: |
+          set -euo pipefail
+          DIR="${{ needs.watch.outputs.dir }}"
+          if [ -z "$DIR" ]; then
+            echo "::error::watch job did not output a dir — check the 'Locate script folder' step"
+            exit 1
+          fi
+          if [ ! -f "$DIR/new.html" ]; then
+            echo "::error::$DIR/new.html not found in checkout — ls of $DIR:"
+            ls -la "$DIR/" || true
+            exit 1
+          fi
           mkdir site
-          cp "${{ needs.watch.outputs.dir }}/new.html" site/index.html
-          cp "${{ needs.watch.outputs.dir }}/report.css" site/report.css
+          cp "$DIR/new.html" site/index.html
+          cp "$DIR/report.css" site/report.css
+          echo "Build site OK — $(wc -c < site/index.html) bytes"
 
       - uses: actions/configure-pages@v6
 
